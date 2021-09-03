@@ -1,0 +1,11 @@
+{
+  "name": "@svelteuse/monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Collection of essential Svelte Utilities",
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "2nthony <https://github.com/evillt>",
+  "license": "MIT"
+}
