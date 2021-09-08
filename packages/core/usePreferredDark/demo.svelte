@@ -1,9 +1,9 @@
 <script lang="ts">
   import { usePreferredDark } from '.'
 
-  const prefersDark = usePreferredDark()
+  const isDark = usePreferredDark()
 </script>
 
 <note class="mb-2">Prefers Dark:</note>
 
-<div>{$prefersDark}</div>
+<div>{$isDark}</div>
