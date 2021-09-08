@@ -1,0 +1,39 @@
+{
+  "name": "@svelte-use/shared",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./index.cjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evillt/svelte-use.git"
+  },
+  "keywords": [
+    "svelte",
+    "svelte-use",
+    "utils"
+  ],
+  "author": "Anthony Fu<https://github.com/antfu>",
+  "sideEffects": false,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vueuse/vueuse/issues"
+  },
+  "homepage": "https://github.com/vueuse/vueuse/tree/main/packages/shared#readme",
+  "types": "./index.d.ts",
+  "module": "./index.mjs",
+  "unpkg": "./index.iife.min.js",
+  "jsdelivr": "./index.iife.min.js",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./*": "./*"
+  }
+}

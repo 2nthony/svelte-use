@@ -1,0 +1,28 @@
+{
+  "eclassicxtends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "@svelte-use/core": ["./packages/core/index.ts"],
+      "@svelte-use/core/*": ["./packages/core/*"],
+      "@svelte-use/shared": ["./packages/shared/index.ts"],
+      "@svelte-use/shared/*": ["./packages/shared/*"]
+    }
+  },
+  "include": ["packages"]
+}

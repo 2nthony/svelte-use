@@ -1,0 +1,17 @@
+import { PackageIndexes, VueUseFunction } from '../meta/types';
+export declare function getTypeDefinition(pkg: string, name: string): Promise<string | undefined>;
+export declare function hasDemo(pkg: string, name: string): boolean;
+export declare function getFunctionHead(pkg: string, name: string): string;
+export declare function getFunctionFooter(pkg: string, name: string): Promise<string>;
+export declare function listFunctions(dir: string, ignore?: string[]): Promise<string[]>;
+export declare function readIndexes(): Promise<PackageIndexes>;
+export declare function getCategories(functions: VueUseFunction[]): string[];
+export declare function updateImport({ packages, functions }: PackageIndexes): Promise<void>;
+export declare function uniq<T extends any[]>(a: T): any[];
+export declare function stringifyFunctions(functions: VueUseFunction[], title?: boolean): string;
+export declare function replacer(code: string, value: string, key: string, insert?: 'head' | 'tail' | 'none'): string;
+export declare function updatePackageREADME({ packages, functions, }: PackageIndexes): Promise<void>;
+export declare function updateIndexREADME({ packages, functions, }: PackageIndexes): Promise<void>;
+export declare function updateFunctionsMD({ packages, functions, }: PackageIndexes): Promise<void>;
+export declare function updateFunctionREADME(indexes: PackageIndexes): Promise<void>;
+export declare function updatePackageJSON(indexes: PackageIndexes): Promise<void>;

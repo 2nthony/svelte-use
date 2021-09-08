@@ -1,0 +1,50 @@
+{
+  "packages": {
+    "shared": {
+      "name": "shared",
+      "display": "Shared utilities",
+      "dir": "packages/shared"
+    },
+    "core": {
+      "name": "core",
+      "display": "SvelteUse",
+      "description": "Collection of essential Svelte Utilities",
+      "dir": "packages/core"
+    }
+  },
+  "categories": [
+    "Browser",
+    "Utilities"
+  ],
+  "functions": [
+    {
+      "name": "utils",
+      "package": "shared",
+      "internal": true
+    },
+    {
+      "name": "whenever",
+      "package": "shared",
+      "docs": "https://vueuse.org/shared/whenever/",
+      "category": "Utilities",
+      "description": "## usage"
+    },
+    {
+      "name": "useEventListener",
+      "package": "core",
+      "internal": true
+    },
+    {
+      "name": "useMediaQuery",
+      "package": "core",
+      "internal": true
+    },
+    {
+      "name": "usePreferredDark",
+      "package": "core",
+      "docs": "https://vueuse.org/core/usePreferredDark/",
+      "category": "Browser",
+      "description": "reactive dark theme preference"
+    }
+  ]
+}
