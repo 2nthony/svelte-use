@@ -91,7 +91,10 @@ importers:
       vue-demi: 0.11.4_vue@3.2.10
 
   packages/core:
-    specifiers: {}
+    specifiers:
+      '@svelte-use/shared': 0.0.4
+    dependencies:
+      '@svelte-use/shared': link:../shared
 
   packages/shared:
     specifiers: {}
