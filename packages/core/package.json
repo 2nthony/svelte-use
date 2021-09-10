@@ -27,5 +27,8 @@
       "require": "./index.cjs"
     },
     "./*": "./*"
+  },
+  "dependencies": {
+    "@svelte-use/shared": "workspace:*"
   }
 }

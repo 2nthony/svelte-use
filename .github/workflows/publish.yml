@@ -29,7 +29,7 @@ jobs:
         with:
           version: 6.14.7
           run_install: true
-      - run: npm run publish:ci
+      - run: pnpm run publish:ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NODE_OPTIONS: '--max-old-space-size=6144'
