@@ -34,6 +34,7 @@
     "@types/node": "^16.7.10",
     "@types/prettier": "^2.3.2",
     "@vueuse/core": "^6.2.1",
+    "bumpp": "^7.1.1",
     "consola": "^2.15.3",
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.6",
