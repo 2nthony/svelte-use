@@ -6,10 +6,11 @@ import parser from 'prettier/parser-typescript'
 import prettier from 'prettier'
 import YAML from 'js-yaml'
 import { activePackages, packages } from '../meta/packages'
-import { PackageIndexes, VueUseFunction, VueUsePackage } from '../meta/types'
+import { PackageIndexes, SvelteUseFunction, SvelteUsePackage } from '../meta/types'
 
-const DOCS_URL = 'https://vueuse.org'
-const GITHUB_BLOB_URL = 'https://github.com/vueuse/vueuse/blob/main/packages'
+const DOCS_URL = ''
+const GITHUB_BLOB_URL =
+  'https://github.com/evillt/svelte-use/blob/main/packages'
 
 const DIR_ROOT = resolve(__dirname, '..')
 const DIR_SRC = resolve(__dirname, '../packages')
@@ -42,23 +43,13 @@ export async function getTypeDefinition(
 }
 
 export function hasDemo(pkg: string, name: string) {
-  return fs.existsSync(join(DIR_SRC, pkg, name, 'demo.vue'))
-}
-
-export function getFunctionHead(pkg: string, name: string) {
-  let head = packages.find((p) => p.name === pkg)!.addon
-    ? `available in add-on [\`@vueuse/${pkg}\`](/${pkg}/README)`
-    : ''
-
-  if (head) head = `\n::: tip\n${head}\n:::\n`
-
-  return head
+  return fs.existsSync(join(DIR_SRC, pkg, name, 'demo.svelte'))
 }
 
 export async function getFunctionFooter(pkg: string, name: string) {
   const URL = `${GITHUB_BLOB_URL}/${pkg}/${name}`
 
-  const hasDemo = fs.existsSync(join(DIR_SRC, pkg, name, 'demo.vue'))
+  const hasDemo = fs.existsSync(join(DIR_SRC, pkg, name, 'demo.svelte'))
 
   const types = await getTypeDefinition(pkg, name)
 
@@ -67,7 +58,7 @@ export async function getFunctionFooter(pkg: string, name: string) {
 
   const links = [
     ['Source', `${URL}/index.ts`],
-    hasDemo ? ['Demo', `${URL}/demo.vue`] : undefined,
+    hasDemo ? ['Demo', `${URL}/demo.svelte`] : undefined,
     ['Docs', `${URL}/index.md`],
   ]
     .filter((i) => i)
@@ -101,7 +92,7 @@ export async function readIndexes() {
 
     const functions = await listFunctions(dir)
 
-    const pkg: VueUsePackage = {
+    const pkg: SvelteUsePackage = {
       ...info,
       dir: relative(DIR_ROOT, dir),
       docs: info.addon ? `${DOCS_URL}/${info.name}/README.html` : undefined,
@@ -112,7 +103,7 @@ export async function readIndexes() {
     for (const fnName of functions) {
       const mdPath = join(dir, fnName, 'index.md')
 
-      const fn: VueUseFunction = {
+      const fn: SvelteUseFunction = {
         name: fnName,
         package: pkg.name,
       }
@@ -157,7 +148,7 @@ export async function readIndexes() {
   return indexes
 }
 
-export function getCategories(functions: VueUseFunction[]): string[] {
+export function getCategories(functions: SvelteUseFunction[]): string[] {
   return uniq(
     functions
       .filter((i) => !i.internal)
@@ -204,15 +195,24 @@ export function uniq<T extends any[]>(a: T) {
   return Array.from(new Set(a))
 }
 
-export function stringifyFunctions(functions: VueUseFunction[], title = true) {
+export function stringifyFunctions(
+  functions: SvelteUseFunction[],
+  options?: { title?: boolean; description?: boolean, list?: boolean },
+) {
   let list = ''
+  options = {
+    title: true,
+    description: true,
+    ...options,
+  }
 
   const categories = getCategories(functions)
 
   for (const category of categories) {
     if (category.startsWith('_')) continue
 
-    if (title) list += `### ${category}\n`
+    if (options.title) list += `### ${category}\n`
+    if (options.list) list += `- ${category}\n`
 
     const categoryFunctions = functions
       .filter((i) => i.category === category)
@@ -221,8 +221,9 @@ export function stringifyFunctions(functions: VueUseFunction[], title = true) {
     for (const { name, docs, description, depreacted } of categoryFunctions) {
       if (depreacted) continue
 
-      const desc = description ? ` — ${description}` : ''
-      list += `  - [\`${name}\`](${docs})${desc}\n`
+      const desc = description && options.description ? ` — ${description}` : ''
+      const label = options.list ? name : `\`${name}\``
+      list += `  - [${label}](${docs})${desc}\n`
     }
     list += '\n'
   }
@@ -255,13 +256,13 @@ export async function updatePackageREADME({
   functions,
 }: PackageIndexes) {
   for (const { name, dir } of Object.values(packages)) {
-    const readmePath = join(dir, 'README.md')
+    const readmePath = join(dir, 'index.md')
 
     if (!fs.existsSync(readmePath)) continue
 
     const functionMD = stringifyFunctions(
       functions.filter((i) => i.package === name),
-      false,
+      { title: false },
     )
     let readme = await fs.readFile(readmePath, 'utf-8')
     readme = replacer(readme, functionMD, 'FUNCTIONS_LIST')
@@ -286,6 +287,22 @@ export async function updateIndexREADME({
   await fs.writeFile('README.md', `${readme.trim()}\n`, 'utf-8')
 }
 
+export async function updateSidebarMD({ functions }: PackageIndexes) {
+  let mdSidebar = await fs.readFile('packages/_sidebar.md', 'utf-8')
+
+  const coreFunctions = functions.filter((i) =>
+    ['core', 'shared'].includes(i.package),
+  )
+  const functionListMD = stringifyFunctions(coreFunctions, {
+    title: false,
+    list: true,
+    description: false,
+  })
+
+  mdSidebar = replacer(mdSidebar, functionListMD, 'FUNCTIONS_LIST')
+  await fs.writeFile('packages/_sidebar.md', mdSidebar, 'utf-8')
+}
+
 export async function updateFunctionsMD({
   packages,
   functions,
@@ -299,22 +316,6 @@ export async function updateFunctionsMD({
 
   mdFn = replacer(mdFn, functionListMD, 'FUNCTIONS_LIST')
   await fs.writeFile('packages/functions.md', mdFn, 'utf-8')
-
-  // let mdAddons = await fs.readFile('packages/add-ons.md', 'utf-8')
-
-  /* const addons = Object.values(packages)
-    .filter((i) => i.addon && !i.deprecated)
-    .map(({ docs, name, display, description }) => {
-      return `## ${display} - [\`@vueuse/${name}\`](${docs})\n${description}\n${stringifyFunctions(
-        functions.filter((i) => i.package === name),
-        false,
-      )}`
-    })
-    .join('\n') */
-
-  // mdAddons = replacer(mdAddons, addons, 'ADDONS_LIST')
-
-  // await fs.writeFile('packages/add-ons.md', mdAddons, 'utf-8')
 }
 
 export async function updateFunctionREADME(indexes: PackageIndexes) {
@@ -347,7 +348,6 @@ export async function updatePackageJSON(indexes: PackageIndexes) {
     description,
     author,
     submodules,
-    iife,
   } of activePackages) {
     const packageDir = join(DIR_SRC, name)
     const packageJSONPath = join(packageDir, 'package.json')
@@ -366,10 +366,6 @@ export async function updatePackageJSON(indexes: PackageIndexes) {
     packageJSON.main = './index.cjs'
     packageJSON.types = './index.d.ts'
     packageJSON.module = './index.mjs'
-    if (iife !== false) {
-      packageJSON.unpkg = './index.iife.min.js'
-      packageJSON.jsdelivr = './index.iife.min.js'
-    }
     packageJSON.exports = {
       '.': {
         import: './index.mjs',

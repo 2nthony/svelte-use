@@ -2,23 +2,11 @@
   <header v-if="showHero" class="home-hero pt-25 pb-10 px-5">
     <p align="center">
       <a href="https://github.com/vueuse/vueuse">
-        <img
-          v-show="isDark"
-          src="/logo-vertical-dark.png"
-          alt="VueUse - Collection of essential Vue Composition Utilities"
-          height="300"
-        />
-        <img
-          v-show="!isDark"
-          src="/logo-vertical.png"
-          alt="VueUse - Collection of essential Vue Composition Utilities"
-          height="300"
-        />
       </a>
       <br />
     </p>
     <div class="description">
-      Collection of essential Vue Composition Utilities
+      Collection of essential Svelte Utilities
     </div>
 
     <NavLink

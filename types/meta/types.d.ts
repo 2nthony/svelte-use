@@ -5,13 +5,11 @@ export interface PackageManifest {
     author?: string;
     description?: string;
     external?: string[];
-    globals?: Record<string, string>;
     manualImport?: boolean;
     deprecated?: boolean;
     submodules?: boolean;
-    iife?: boolean;
 }
-export interface VueUseFunction {
+export interface SvelteUseFunction {
     name: string;
     package: string;
     category?: string;
@@ -22,12 +20,12 @@ export interface VueUseFunction {
     component?: boolean;
     directive?: boolean;
 }
-export interface VueUsePackage extends PackageManifest {
+export interface SvelteUsePackage extends PackageManifest {
     dir: string;
     docs?: string;
 }
 export interface PackageIndexes {
-    packages: Record<string, VueUsePackage>;
+    packages: Record<string, SvelteUsePackage>;
     categories: string[];
-    functions: VueUseFunction[];
+    functions: SvelteUseFunction[];
 }

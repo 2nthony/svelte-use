@@ -12,8 +12,6 @@ const Home = defineAsyncComponent(() => import('./components/Home.vue'))
 
 const NoopComponent = () => null
 
-const AlgoliaSearchBox = defineAsyncComponent(() => import('./components/AlgoliaSearchBox.vue'))
-
 // generic state
 const route = useRoute()
 const { site, page, theme, frontmatter } = useData()
@@ -22,11 +20,6 @@ const { site, page, theme, frontmatter } = useData()
 const isCustomLayout = computed(() => !!frontmatter.value.customLayout)
 // home
 const enableHome = computed(() => !!frontmatter.value.home)
-
-// automatic multilang check for AlgoliaSearchBox
-const isMultiLang = computed(
-  () => Object.keys(theme.value.locales || {}).length > 0,
-)
 
 // navbar
 const showNavbar = computed(() => {
@@ -76,16 +69,6 @@ const pageClasses = computed(() => {
 <template>
   <div class="theme" :class="pageClasses">
     <NavBar v-if="showNavbar" @toggle="toggleSidebar">
-      <template #search>
-        <slot name="navbar-search">
-          <AlgoliaSearchBox
-            v-if="theme.algolia"
-            :key="site.lang"
-            :options="theme.algolia"
-            :multilang="isMultiLang"
-          />
-        </slot>
-      </template>
     </NavBar>
 
     <SideBar :open="openSideBar">

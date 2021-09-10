@@ -1,3 +1,4 @@
+import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 import DemoContainer from './components/DemoContainer.vue'
@@ -12,6 +13,7 @@ import './styles/utils.css'
 import 'windi.css'
 
 const theme = {
+  //...DefaultTheme,
   Layout,
   NotFound,
   enhanceApp({ app }) {

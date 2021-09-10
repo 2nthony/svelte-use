@@ -13,5 +13,5 @@ if (version.includes('beta'))
 
 for (const { name } of activePackages) {
   execSync(command, { stdio: 'inherit', cwd: path.join('packages', name, 'dist') })
-  consola.success(`Published @vueuse/${name}`)
+  consola.success(`Published @svelte-use/${name}`)
 }

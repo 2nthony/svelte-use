@@ -1,31 +1,13 @@
-import fs from 'fs'
 import { resolve } from 'path'
 import typescript from 'rollup-plugin-typescript2'
-import { terser } from 'rollup-plugin-terser'
 import dts from 'rollup-plugin-dts'
-import { OutputOptions, Plugin, RollupOptions } from 'rollup'
+import { OutputOptions, RollupOptions } from 'rollup'
 import fg from 'fast-glob'
 import { activePackages } from '../meta/packages'
 
-const VUE_DEMI_IIFE = fs.readFileSync(require.resolve('vue-demi/lib/index.iife.js'), 'utf-8')
 const configs: RollupOptions[] = []
 
-const injectVueDemi: Plugin = {
-  name: 'inject-vue-demi',
-  renderChunk(code) {
-    return `${VUE_DEMI_IIFE};\n;${code}`
-  },
-}
-
-for (const { globals, name, external, submodules, iife } of activePackages) {
-  const iifeGlobals = {
-    'vue-demi': 'VueDemi',
-    '@vueuse/shared': 'VueUse',
-    '@vueuse/core': 'VueUse',
-    ...(globals || {}),
-  }
-
-  const iifeName = 'VueUse'
+for (const { name, external, submodules } of activePackages) {
   const functionNames = ['index']
 
   if (submodules)
@@ -45,36 +27,6 @@ for (const { globals, name, external, submodules, iife } of activePackages) {
       },
     ]
 
-    if (iife !== false) {
-      output.push(
-        {
-          file: `packages/${name}/dist/${fn}.iife.js`,
-          format: 'iife',
-          name: iifeName,
-          extend: true,
-          globals: iifeGlobals,
-          plugins: [
-            injectVueDemi,
-          ],
-        },
-        {
-          file: `packages/${name}/dist/${fn}.iife.min.js`,
-          format: 'iife',
-          name: iifeName,
-          extend: true,
-          globals: iifeGlobals,
-          plugins: [
-            injectVueDemi,
-            terser({
-              format: {
-                comments: false,
-              },
-            }),
-          ],
-        },
-      )
-    }
-
     configs.push({
       input,
       output,
@@ -88,8 +40,7 @@ for (const { globals, name, external, submodules, iife } of activePackages) {
         }),
       ],
       external: [
-        'vue-demi',
-        '@vueuse/shared',
+        '@svelte-use/shared',
         ...(external || []),
       ],
     })
@@ -104,8 +55,7 @@ for (const { globals, name, external, submodules, iife } of activePackages) {
         dts(),
       ],
       external: [
-        'vue-demi',
-        '@vueuse/shared',
+        '@svelte-use/shared',
         ...(external || []),
       ],
     })

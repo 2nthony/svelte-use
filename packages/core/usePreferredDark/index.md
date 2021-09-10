@@ -8,8 +8,12 @@ Reactive dark theme preference.
 
 ## Usage
 
-```ts
-import { usePreferredDark } from '@svelte-use/core'
+```html
+<script>
+  import { usePreferredDark } from '@svelte-use/core'
 
-const isDark = usePreferredDark()
+  const isDark = usePreferredDark()
+</script>
+
+<p>{$isDark}</p>
 ```

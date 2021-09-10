@@ -25,26 +25,35 @@
     {
       "name": "whenever",
       "package": "shared",
-      "docs": "https://vueuse.org/shared/whenever/",
+      "docs": "/shared/whenever/",
       "category": "Utilities",
       "description": "## usage"
     },
     {
       "name": "useEventListener",
       "package": "core",
-      "internal": true
+      "docs": "/core/useEventListener/",
+      "category": "Browser",
+      "description": "use EventListener with ease"
     },
     {
       "name": "useMediaQuery",
       "package": "core",
-      "internal": true
+      "docs": "/core/useMediaQuery/",
+      "category": "Browser",
+      "description": "reactive [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)"
     },
     {
       "name": "usePreferredDark",
       "package": "core",
-      "docs": "https://vueuse.org/core/usePreferredDark/",
+      "docs": "/core/usePreferredDark/",
       "category": "Browser",
       "description": "reactive dark theme preference"
+    },
+    {
+      "name": "useStorage",
+      "package": "core",
+      "internal": true
     }
   ]
 }

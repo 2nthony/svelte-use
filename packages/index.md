@@ -1,7 +1,7 @@
 ---
 home: true
 
-actionText: All Function
+actionText: All Functions
 actionLink: /functions
 
 altActionText: Get Started

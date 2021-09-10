@@ -2,13 +2,6 @@
   "name": "@svelte-use/core",
   "version": "0.0.1",
   "description": "Collection of essential Svelte Utilities",
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "./index.cjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evillt/svelte-use.git"
@@ -26,9 +19,8 @@
   },
   "homepage": "https://github.com/vueuse/vueuse#readme",
   "types": "./index.d.ts",
+  "main": "./index.cjs",
   "module": "./index.mjs",
-  "unpkg": "./index.iife.min.js",
-  "jsdelivr": "./index.iife.min.js",
   "exports": {
     ".": {
       "import": "./index.mjs",

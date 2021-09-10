@@ -8,7 +8,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 import WindiCSS from 'vite-plugin-windicss'
 import { functionNames, getFunction } from '../meta/function-indexes'
-import { getFunctionFooter, getFunctionHead, replacer } from '../scripts/utils'
+import { getFunctionFooter, replacer } from '../scripts/utils'
 
 // https://vitejs.dev/config/
 const config: UserConfig = {
@@ -90,8 +90,6 @@ function MarkdownTransform(): Plugin {
           header =
             '\n<script setup>\nimport Demo from \'./demo.svelte\'\n</script>\n<DemoContainer :svelteComponent="Demo"></DemoContainer>\n\n'
         }
-
-        header += getFunctionHead(pkg, name)
 
         if (header)
           code =
