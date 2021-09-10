@@ -36,7 +36,6 @@ const Functions = [
 const DefaultSideBar = [
   { text: 'Guide', children: Guide },
   { text: 'Core Functions', children: Functions },
-  { text: 'Export Size', link: '/export-size' },
   { text: 'Recently Updated', link: '/recently-updated' },
 ]
 
@@ -79,7 +78,6 @@ const config = {
         text: 'More',
         items: [
           { text: 'Playground', link: 'https://play.vueuse.org' },
-          { text: 'Export Size', link: '/export-size' },
         ],
       },
       {
@@ -107,7 +105,6 @@ const config = {
       '/guide/': DefaultSideBar,
       '/contributing': DefaultSideBar,
       '/guidelines': DefaultSideBar,
-      '/export-size': DefaultSideBar,
       '/recently-updated': DefaultSideBar,
 
       '/functions': FunctionsSideBar,
