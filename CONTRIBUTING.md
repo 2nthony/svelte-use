@@ -2,7 +2,7 @@
 
 Thanks for being interested in contributing to this project!
 
-## Development 
+## Development
 
 ### Setup
 
@@ -41,7 +41,7 @@ There are some notes for adding new functions
 
 New add-ons are greatly welcome!
 
-- Create a new folder under `packages/`, name it as your add-on name. 
+- Create a new folder under `packages/`, name it as your add-on name.
 - Add add-on details in `scripts/packages.ts`
 - Create `README.md` under that folder.
 - Add functions as you would do to the core package.
@@ -92,7 +92,7 @@ for `index.md` the first sentence will be displayed as the short intro in the fu
 This will be the intro. The detail descriptions...
 ```
 
-Read more about the [guidelines](https://vueuse.org/guidelines).
+<!--Read more about the [guidelines](https://vueuse.org/guidelines).-->
 
 ## Code Style
 

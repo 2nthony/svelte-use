@@ -104,7 +104,6 @@ const config = {
     sidebar: {
       '/guide/': DefaultSideBar,
       '/contributing': DefaultSideBar,
-      '/guidelines': DefaultSideBar,
       '/recently-updated': DefaultSideBar,
 
       '/functions': FunctionsSideBar,
