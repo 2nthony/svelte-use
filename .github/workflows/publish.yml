@@ -28,7 +28,7 @@ jobs:
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.14.7
-      - run: pnpm i
+      - run: pnpm i --frozen-lockfile
       - run: pnpm run publish:ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
