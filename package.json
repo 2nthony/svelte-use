@@ -1,6 +1,6 @@
 {
   "name": "@svelte-use/monorepo",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "private": true,
   "description": "Collection of essential Svelte Utilities",
   "workspaces": [
