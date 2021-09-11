@@ -92,7 +92,7 @@ importers:
 
   packages/core:
     specifiers:
-      '@svelte-use/shared': workspace:../shared
+      '@svelte-use/shared': 0.0.11
     dependencies:
       '@svelte-use/shared': link:../shared
 
