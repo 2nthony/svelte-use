@@ -355,14 +355,14 @@ export async function updatePackageJSON(indexes: PackageIndexes) {
 
     packageJSON.version = version
     packageJSON.description = description || packageJSON.description
-    packageJSON.author = author || 'Anthony Fu<https://github.com/antfu>'
+    packageJSON.author = author || '2nthony <https://github.com/evillt>'
     packageJSON.bugs = {
-      url: 'https://github.com/vueuse/vueuse/issues',
+      url: 'https://github.com/evillt/svelte-use/issues',
     }
     packageJSON.homepage =
       name === 'core'
-        ? 'https://github.com/vueuse/vueuse#readme'
-        : `https://github.com/vueuse/vueuse/tree/main/packages/${name}#readme`
+        ? 'https://github.com/evillt/svelte-use#readme'
+        : `https://github.com/evillt/svelte-use/tree/main/packages/${name}#readme`
     packageJSON.main = './index.cjs'
     packageJSON.types = './index.d.ts'
     packageJSON.module = './index.mjs'

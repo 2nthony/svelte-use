@@ -11,13 +11,13 @@
     "svelte-use",
     "utils"
   ],
-  "author": "Anthony Fu<https://github.com/antfu>",
+  "author": "2nthony <https://github.com/evillt>",
   "sideEffects": false,
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vueuse/vueuse/issues"
+    "url": "https://github.com/evillt/svelte-use/issues"
   },
-  "homepage": "https://github.com/vueuse/vueuse#readme",
+  "homepage": "https://github.com/evillt/svelte-use#readme",
   "types": "./index.d.ts",
   "main": "./index.cjs",
   "module": "./index.mjs",
