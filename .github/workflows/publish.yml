@@ -30,7 +30,6 @@ jobs:
           version: 6.14.7
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile]
       - run: pnpm run publish:ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
