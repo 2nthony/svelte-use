@@ -385,6 +385,7 @@ export async function updatePackageJSON(indexes: PackageIndexes) {
         })
     }
 
+    // pnpm workspace will do this
     //for (const key of Object.keys(packageJSON.dependencies || {})) {
       //if (key.startsWith('@svelte-use/'))
         //packageJSON.dependencies[key] = version
