@@ -4,9 +4,9 @@ import consola from 'consola'
 import { version } from '../package.json'
 import { activePackages } from '../meta/packages'
 
-execSync('pnpm run build', { stdio: 'inherit' })
+execSync('npm run build', { stdio: 'inherit' })
 
-let command = 'pnpm publish --access public --no-git-checks'
+let command = 'npm publish --access public --no-git-checks'
 
 if (version.includes('beta'))
   command += ' --tag beta'

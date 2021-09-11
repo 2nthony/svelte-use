@@ -25,11 +25,8 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.14.7
-      - run: pnpm i
-      - run: pnpm run publish:ci
+      - run: yarn install --frozen-lockfile
+      - run: npm run publish:ci
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NODE_OPTIONS: '--max-old-space-size=6144'
