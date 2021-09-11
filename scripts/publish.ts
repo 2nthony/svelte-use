@@ -6,7 +6,7 @@ import { activePackages } from '../meta/packages'
 
 execSync('pnpm run build', { stdio: 'inherit' })
 
-let command = 'pnpm publish --access public'
+let command = 'pnpm publish --access public --no-git-checks'
 
 if (version.includes('beta'))
   command += ' --tag beta'
