@@ -1,0 +1,31 @@
+{
+  "name": "@svelte-use/store",
+  "version": "0.0.16",
+  "description": "Enhancement for svelte/store",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evillt/svelte-use.git"
+  },
+  "keywords": [
+    "svelte",
+    "svelte-use",
+    "utils"
+  ],
+  "author": "2nthony <https://github.com/evillt>",
+  "sideEffects": false,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evillt/svelte-use/issues"
+  },
+  "homepage": "https://github.com/evillt/svelte-use/tree/main/packages/store#readme",
+  "types": "./index.d.ts",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./*": "./*"
+  }
+}

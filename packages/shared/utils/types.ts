@@ -2,7 +2,7 @@ import { Readable } from 'svelte/store'
 /**
  * Any function
  */
-export type Fn = () => void
+export type Fn = (...args: any[]) => void
 
 /**
  * Infers the element type of an array

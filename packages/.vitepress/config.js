@@ -109,6 +109,8 @@ const config = {
       '/functions': FunctionsSideBar,
       '/core/': FunctionsSideBar,
       '/shared/': FunctionsSideBar,
+
+      '/store/': FunctionsSideBar,
     },
   },
   head: [
