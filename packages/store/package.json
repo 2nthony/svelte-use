@@ -1,6 +1,6 @@
 {
   "name": "@svelte-use/store",
-  "version": "0.0.16",
+  "version": "0.1.0",
   "description": "Enhancement for svelte/store",
   "repository": {
     "type": "git",
