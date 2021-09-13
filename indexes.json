@@ -21,9 +21,17 @@
   "categories": [
     "@Store",
     "Browser",
+    "Component",
     "Utilities"
   ],
   "functions": [
+    {
+      "name": "tryOnDestroy",
+      "package": "shared",
+      "docs": "/shared/tryOnDestroy/",
+      "category": "Component",
+      "description": "safe `onDestroy`"
+    },
     {
       "name": "utils",
       "package": "shared",
@@ -32,28 +40,28 @@
     {
       "name": "whenever",
       "package": "shared",
-      "docs": "https://svelte-use.vercel.app/shared/whenever/",
+      "docs": "/shared/whenever/",
       "category": "Utilities",
       "description": "shorthand for watching value to be truthy"
     },
     {
       "name": "useEventListener",
       "package": "core",
-      "docs": "https://svelte-use.vercel.app/core/useEventListener/",
+      "docs": "/core/useEventListener/",
       "category": "Browser",
       "description": "use EventListener with ease"
     },
     {
       "name": "useMediaQuery",
       "package": "core",
-      "docs": "https://svelte-use.vercel.app/core/useMediaQuery/",
+      "docs": "/core/useMediaQuery/",
       "category": "Browser",
       "description": "reactive [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)"
     },
     {
       "name": "usePreferredDark",
       "package": "core",
-      "docs": "https://svelte-use.vercel.app/core/usePreferredDark/",
+      "docs": "/core/usePreferredDark/",
       "category": "Browser",
       "description": "reactive dark theme preference"
     },
@@ -65,28 +73,28 @@
     {
       "name": "derived",
       "package": "store",
-      "docs": "https://svelte-use.vercel.app/store/derived/",
+      "docs": "/store/derived/",
       "category": "@Store",
       "description": "origin [derived](https://svelte.dev/docs#derived)"
     },
     {
       "name": "get",
       "package": "store",
-      "docs": "https://svelte-use.vercel.app/store/get/",
+      "docs": "/store/get/",
       "category": "@Store",
       "description": "origin [get](https://svelte.dev/docs#get)"
     },
     {
       "name": "readable",
       "package": "store",
-      "docs": "https://svelte-use.vercel.app/store/readable/",
+      "docs": "/store/readable/",
       "category": "@Store",
       "description": "auto unsubscribe on destory for `readable`"
     },
     {
       "name": "writable",
       "package": "store",
-      "docs": "https://svelte-use.vercel.app/store/writable/",
+      "docs": "/store/writable/",
       "category": "@Store",
       "description": "auto unsubscribe on destory for `writable`"
     }

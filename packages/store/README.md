@@ -12,10 +12,10 @@ npm i @svelte-use/store
 
 <!--GENERATED LIST, DO NOT MODIFY MANUALLY-->
 <!--FUNCTIONS_LIST_STARTS-->
-  - [`derived`](https://svelte-use.vercel.app/store/derived/) — origin [derived](https://svelte.dev/docs#derived)
-  - [`get`](https://svelte-use.vercel.app/store/get/) — origin [get](https://svelte.dev/docs#get)
-  - [`readable`](https://svelte-use.vercel.app/store/readable/) — auto unsubscribe on destory for `readable`
-  - [`writable`](https://svelte-use.vercel.app/store/writable/) — auto unsubscribe on destory for `writable`
+  - [`derived`](/store/derived/) — origin [derived](https://svelte.dev/docs#derived)
+  - [`get`](/store/get/) — origin [get](https://svelte.dev/docs#get)
+  - [`readable`](/store/readable/) — auto unsubscribe on destory for `readable`
+  - [`writable`](/store/writable/) — auto unsubscribe on destory for `writable`
 
 
 <!--FUNCTIONS_LIST_ENDS-->
