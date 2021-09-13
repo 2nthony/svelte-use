@@ -49,9 +49,6 @@ async function build() {
   consola.info('Rollup')
   exec('yarn run build:rollup', { stdio: 'inherit' })
 
-  consola.info('Build Types')
-  exec('yarn run build:types', { stdio: 'inherit' })
-
   await buildMetaFiles()
 }
 

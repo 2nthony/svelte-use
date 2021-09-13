@@ -6,7 +6,7 @@ import { activePackages } from '../meta/packages'
 
 execSync('npm run build', { stdio: 'inherit' })
 
-let command = 'npm publish --access public --no-git-checks'
+let command = 'npm publish --access public'
 
 if (version.includes('beta'))
   command += ' --tag beta'
