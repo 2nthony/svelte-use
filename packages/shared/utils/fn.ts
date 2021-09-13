@@ -1,9 +1,15 @@
-import { Fn } from '.'
+import { Fn } from './types'
 
-export const run = (fn: Fn, ...args: any[]): void => {
+/**
+ *  Run a function
+ */
+export const run = (fn: Fn, ...args: any[]) => {
   fn(...args)
 }
 
+/**
+ * Run all functions
+ */
 export const runAll = (fns: Fn[], ...args: any[]) => {
   fns.forEach((fn) => run(fn, ...args))
 }
