@@ -1,4 +1,4 @@
-import {get_current_component} from 'svelte/internal'
+import { get_current_component } from 'svelte/internal'
 
 export * from './is'
 export * from './types'
