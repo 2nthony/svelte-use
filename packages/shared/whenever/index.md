@@ -4,6 +4,8 @@ category: Utilities
 
 # whenever
 
+Shorthand for watching value to be truthy.
+
 ## usage
 
 ```ts
