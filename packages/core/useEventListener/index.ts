@@ -1,6 +1,4 @@
-import { onDestroy } from 'svelte'
 import { listen } from 'svelte/internal'
-import { readable } from 'svelte/store'
 import { defaultWindow } from '../_configurable'
 import {
   Fn,
@@ -8,7 +6,9 @@ import {
   noop,
   isReadable,
   MaybeReadable,
+  tryOnDestroy,
 } from '@svelte-use/shared'
+import { readable } from '@svelte-use/store'
 
 interface InferEventTarget<Events> {
   addEventListener(event: Events, fn?: any, options?: any): any
@@ -129,8 +129,8 @@ export function useEventListener(...args: any[]) {
 
   let cleanup = noop
 
-  const targetStore = isReadable(target) ? target : readable(target)
-  const unsubscribe = targetStore.subscribe((el) => {
+  const store = isReadable(target) ? target : readable(target)
+  store.subscribe((el) => {
     cleanup()
 
     if (!el) {
@@ -146,11 +146,10 @@ export function useEventListener(...args: any[]) {
   })
 
   const stop = () => {
-    unsubscribe()
     cleanup()
   }
 
-  onDestroy(stop)
+  tryOnDestroy(stop)
 
   return stop
 }
