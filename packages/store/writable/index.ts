@@ -1,5 +1,4 @@
-import { Fn, noop, runAll } from '@svelte-use/shared'
-import { onDestroy } from 'svelte'
+import { Fn, noop, runAll, tryOnDestroy } from '@svelte-use/shared'
 import {
   writable as _writable,
   get,
@@ -61,7 +60,7 @@ export function writable<T>(
     unsubscribe()
   }
 
-  onDestroy(stop)
+  tryOnDestroy(stop)
 
   return {
     set,
