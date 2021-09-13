@@ -8,7 +8,7 @@ import YAML from 'js-yaml'
 import { activePackages, packages } from '../meta/packages'
 import { PackageIndexes, SvelteUseFunction, SvelteUsePackage } from '../meta/types'
 
-const DOCS_URL = ''
+const DOCS_URL = 'https://svelte-use.vercel.app'
 const GITHUB_BLOB_URL =
   'https://github.com/evillt/svelte-use/blob/main/packages'
 
@@ -256,7 +256,7 @@ export async function updatePackageREADME({
   functions,
 }: PackageIndexes) {
   for (const { name, dir } of Object.values(packages)) {
-    const readmePath = join(dir, 'index.md')
+    const readmePath = join(dir, 'README.md')
 
     if (!fs.existsSync(readmePath)) continue
 
