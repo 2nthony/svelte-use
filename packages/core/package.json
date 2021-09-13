@@ -29,6 +29,7 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@svelte-use/shared": "0.2.0"
+    "@svelte-use/shared": "0.2.0",
+    "@svelte-use/store": "0.2.0"
   }
 }
