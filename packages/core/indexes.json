@@ -33,6 +33,13 @@
       "description": "safe `onDestroy`"
     },
     {
+      "name": "tryOnMount",
+      "package": "shared",
+      "docs": "/shared/tryOnMount/",
+      "category": "Component",
+      "description": "safe `onMount`"
+    },
+    {
       "name": "utils",
       "package": "shared",
       "internal": true
