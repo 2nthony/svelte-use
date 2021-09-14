@@ -5,7 +5,7 @@ export * from './types'
 export * from './fn'
 
 /**
- * Safe `get_current_component`. Call `get_current_component()` without throw error.
+ * Silent `get_current_component`. Call `get_current_component()` without throw error.
  */
 export function tryGetCurrentComponent() {
   let currentComponent

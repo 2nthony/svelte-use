@@ -1,6 +1,5 @@
 import { noop } from '@svelte-use/shared'
 import {
-  readable as _readable,
   Readable,
   StartStopNotifier,
 } from 'svelte/store'
