@@ -14,7 +14,7 @@
       <div v-if="repo" class="mr-2 ml-2">
         <a
           class="icon-button"
-          href="https://twitter.com/vueuse"
+          href="https://twitter.com/svelteuse"
           target="_blank"
           aria-label="View GitHub Repo"
         >
