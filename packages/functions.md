@@ -9,6 +9,7 @@
 
 ### Component
   - [`tryOnDestroy`](/shared/tryOnDestroy/) — safe `onDestroy`
+  - [`tryOnMount`](/shared/tryOnMount/) — safe `onMount`
 
 ### Utilities
   - [`whenever`](/shared/whenever/) — shorthand for watching value to be truthy
