@@ -16,6 +16,7 @@ const config: UserConfig = {
     alias: {
       '@svelte-use/core': resolve(__dirname, 'core/index.ts'),
       '@svelte-use/shared': resolve(__dirname, 'shared/index.ts'),
+      '@svelte-use/store': resolve(__dirname, 'store/index.ts'),
     },
   },
   plugins: [

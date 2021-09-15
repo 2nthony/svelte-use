@@ -20,6 +20,7 @@
   },
   "categories": [
     "@Store",
+    "Animation",
     "Browser",
     "Component",
     "Utilities"
@@ -38,6 +39,20 @@
       "docs": "/shared/tryOnMount/",
       "category": "Component",
       "description": "safe `onMount`"
+    },
+    {
+      "name": "useTimeout",
+      "package": "shared",
+      "docs": "/shared/useTimeout/",
+      "category": "Animation",
+      "description": "update value after a given time with controls"
+    },
+    {
+      "name": "useTimeoutFn",
+      "package": "shared",
+      "docs": "/shared/useTimeoutFn/",
+      "category": "Animation",
+      "description": "wrapper for `setTimeout` with controls"
     },
     {
       "name": "utils",
