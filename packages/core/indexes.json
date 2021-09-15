@@ -41,6 +41,13 @@
       "description": "safe `onMount`"
     },
     {
+      "name": "useTimeout",
+      "package": "shared",
+      "docs": "/shared/useTimeout/",
+      "category": "Animation",
+      "description": "update value after a given time with controls"
+    },
+    {
       "name": "useTimeoutFn",
       "package": "shared",
       "docs": "/shared/useTimeoutFn/",
