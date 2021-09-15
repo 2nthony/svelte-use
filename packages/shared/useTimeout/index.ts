@@ -1,7 +1,7 @@
 import { Writable } from 'svelte/store'
 import { noop, Stopable } from '../utils'
 import { TimeoutFnOptions, useTimeoutFn } from '../useTimeoutFn'
-import { writable } from '@svelte-use/store'
+import { readable } from '@svelte-use/store'
 
 export interface TimeoutOptions<Controls extends boolean>
   extends TimeoutFnOptions {
@@ -38,8 +38,9 @@ export function useTimeout(
 
   const controls = useTimeoutFn(noop, interval, options)
 
-  const ready = writable(true)
-  controls.isPending.subscribe(value => ready.set(!value))
+  const ready = readable(true, (set) => {
+    controls.isPending.subscribe((value) => set(!value))
+  })
 
   if (exposeControls) {
     return {
