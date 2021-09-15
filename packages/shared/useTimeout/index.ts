@@ -36,10 +36,10 @@ export function useTimeout(
 ) {
   const { controls: exposeControls = false } = options
 
-  const ready = writable(false)
-
   const controls = useTimeoutFn(noop, interval, options)
-  controls.isPending.subscribe(ready.set)
+
+  const ready = writable(true)
+  controls.isPending.subscribe(value => ready.set(!value))
 
   if (exposeControls) {
     return {
