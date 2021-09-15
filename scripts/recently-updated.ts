@@ -35,7 +35,7 @@ export async function generateRecentUpdated() {
           const hash = hashMaps[name]
           return {
             ...fn,
-            description: `${fn.description} ([\`${hash.slice(0, 5)}\`](https://github.com/vueuse/vueuse/commit/${hash}))`,
+            description: `${fn.description} ([\`${hash.slice(0, 5)}\`](https://github.com/evillt/svelte-use/commit/${hash}))`,
           }
         }
         return null
