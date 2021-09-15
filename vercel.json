@@ -5,7 +5,7 @@
   },
   "redirects": [
     {
-      "source": "/*",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
