@@ -5,4 +5,4 @@
 </script>
 
 <p>Ready: { $ready.toString() }</p>
-<button disabled={$ready} on:click={start}>Start Again</button>
+<button disabled={!$ready} on:click={start}>Start Again</button>
