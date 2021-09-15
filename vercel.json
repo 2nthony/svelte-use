@@ -2,5 +2,11 @@
   "cleanUrls": true,
   "github": {
     "silent": true
-  }
+  },
+  "redirects": [
+    {
+      "source": "/*",
+      "destination": "/index.html"
+    }
+  ]
 }
