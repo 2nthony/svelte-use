@@ -20,7 +20,7 @@ Update value after a given time with controls.
 <script>
   import { useTimeout, promiseTimeout } from '@svelte-use/core'
 
-  const ready = useTimeout(1000, { controls: true })
+  const { ready, start, stop } = useTimeout(1000, { controls: true })
 
   console.log($ready) // false
 
