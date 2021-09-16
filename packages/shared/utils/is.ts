@@ -1,5 +1,5 @@
 //https://github.com/vueuse/vueuse/blob/main/packages/shared/utils/is.ts
-import { Readable } from 'svelte/store'
+import { Readable, Writable } from 'svelte/store'
 
 export const isClient = typeof window !== 'undefined'
 export const isDef = <T = any>(val?: T): val is T => typeof val !== 'undefined'
@@ -17,8 +17,14 @@ export const isObject = (val: any): val is object =>
   toString.call(val) === '[object Object]'
 export const isWindow = (val: any): val is Window =>
   typeof window !== 'undefined' && toString.call(val) === '[object Window]'
-export const isReadable = <T>(val: any): val is Readable<T> =>
-  'subscribe' in (val || {})
+export const isReadable = <T>(store: any): store is Readable<T> => {
+  return store && isFunction(store.subscribe)
+}
+export const isWritable = <T>(store: any): store is Writable<T> => {
+  return (
+    store && ['subscribe', 'set', 'update'].every((n) => isFunction(store[n]))
+  )
+}
 export const now = () => Date.now()
 export const timestamp = () => +Date.now()
 export const clamp = (n: number, min: number, max: number) =>

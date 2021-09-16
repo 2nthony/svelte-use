@@ -18,6 +18,15 @@ export type ElementOf<T> = T extends (infer E)[] ? E : never
  */
 export type MaybeReadable<T> = T | Readable<T>
 
+/**
+ * Maybe it's a Writable, or not.
+ *
+ * ```ts
+ * type Writable = T | Writable<T>
+ * ```
+ */
+export type MaybeWritable<T> = T | Writable<T>
+
 export interface Stopable {
   /**
    * A writable indicate whether a stopable instance is executing
