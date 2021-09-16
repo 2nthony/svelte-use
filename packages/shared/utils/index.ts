@@ -1,4 +1,8 @@
 import { get_current_component } from 'svelte/internal'
+import { get, readable } from '@svelte-use/store'
+import { MaybeReadable } from './types'
+import { isReadable } from './is'
+import { Readable } from 'svelte/store'
 
 export * from './is'
 export * from './types'
@@ -29,4 +33,12 @@ export function promiseTimeout(
       setTimeout(resolve, ms)
     }
   })
+}
+
+export function unReadable<T>(val: MaybeReadable<T>): T {
+  return isReadable(val) ? get(val) : val
+}
+
+export function toReadable<T>(val: MaybeReadable<T>): Readable<T> {
+  return isReadable(val) ? val : readable(val)
 }

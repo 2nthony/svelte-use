@@ -17,7 +17,8 @@ export const isObject = (val: any): val is object =>
   toString.call(val) === '[object Object]'
 export const isWindow = (val: any): val is Window =>
   typeof window !== 'undefined' && toString.call(val) === '[object Window]'
-export const isReadable = <T>(val: any): val is Readable<T> => 'subscribe' in val
+export const isReadable = <T>(val: any): val is Readable<T> =>
+  'subscribe' in (val || {})
 export const now = () => Date.now()
 export const timestamp = () => +Date.now()
 export const clamp = (n: number, min: number, max: number) =>
