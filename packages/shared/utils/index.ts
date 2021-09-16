@@ -1,8 +1,8 @@
 import { get_current_component } from 'svelte/internal'
 import { get, readable } from '@svelte-use/store'
-import { MaybeReadable } from './types'
-import { isReadable } from './is'
-import { Readable } from 'svelte/store'
+import { MaybeReadable, MaybeWritable } from './types'
+import { isReadable, isWritable } from './is'
+import { Readable, writable, Writable } from 'svelte/store'
 
 export * from './is'
 export * from './types'
@@ -41,4 +41,8 @@ export function unReadable<T>(val: MaybeReadable<T>): T {
 
 export function toReadable<T>(val: MaybeReadable<T>): Readable<T> {
   return isReadable(val) ? val : readable(val)
+}
+
+export function toWritable<T>(val: MaybeWritable<T>): Writable<T> {
+  return isWritable(val) ? val : writable(val)
 }

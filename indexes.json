@@ -101,6 +101,13 @@
       "internal": true
     },
     {
+      "name": "useTitle",
+      "package": "core",
+      "docs": "/core/useTitle/",
+      "category": "Browser",
+      "description": "reactive document title"
+    },
+    {
       "name": "derived",
       "package": "store",
       "docs": "/store/derived/",

@@ -14,6 +14,7 @@
   - [`useEventListener`](/core/useEventListener/) — use EventListener with ease
   - [`useMediaQuery`](/core/useMediaQuery/) — reactive [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - [`usePreferredDark`](/core/usePreferredDark/) — reactive dark theme preference
+  - [`useTitle`](/core/useTitle/) — reactive document title
 
 ### Component
   - [`tryOnDestroy`](/shared/tryOnDestroy/) — safe `onDestroy`
