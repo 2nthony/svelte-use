@@ -19,6 +19,9 @@
   - [`tryOnDestroy`](/shared/tryOnDestroy/) — safe `onDestroy`
   - [`tryOnMount`](/shared/tryOnMount/) — safe `onMount`
 
+### Sensors
+  - [`useMutationObserver`](/core/useMutationObserver/) — watch for changes being made to the DOM tree
+
 ### Utilities
   - [`whenever`](/shared/whenever/) — shorthand for watching value to be truthy
 

@@ -23,6 +23,7 @@
     "Animation",
     "Browser",
     "Component",
+    "Sensors",
     "Utilities"
   ],
   "functions": [
@@ -79,6 +80,13 @@
       "docs": "/core/useMediaQuery/",
       "category": "Browser",
       "description": "reactive [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)"
+    },
+    {
+      "name": "useMutationObserver",
+      "package": "core",
+      "docs": "/core/useMutationObserver/",
+      "category": "Sensors",
+      "description": "watch for changes being made to the DOM tree"
     },
     {
       "name": "usePreferredDark",
