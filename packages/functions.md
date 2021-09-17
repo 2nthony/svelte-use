@@ -24,6 +24,8 @@
   - [`useMutationObserver`](/core/useMutationObserver/) — watch for changes being made to the DOM tree
 
 ### State
+  - [`useLocalStorage`](/core/useLocalStorage/) — reactive [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+  - [`useSessionStorage`](/core/useSessionStorage/) — reactive [SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
   - [`useStorage`](/core/useStorage/) — reactive [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)/[SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 
 ### Utilities

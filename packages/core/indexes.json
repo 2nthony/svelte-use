@@ -76,6 +76,13 @@
       "description": "use EventListener with ease"
     },
     {
+      "name": "useLocalStorage",
+      "package": "core",
+      "docs": "/core/useLocalStorage/",
+      "category": "State",
+      "description": "reactive [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)"
+    },
+    {
       "name": "useMediaQuery",
       "package": "core",
       "docs": "/core/useMediaQuery/",
@@ -95,6 +102,13 @@
       "docs": "/core/usePreferredDark/",
       "category": "Browser",
       "description": "reactive dark theme preference"
+    },
+    {
+      "name": "useSessionStorage",
+      "package": "core",
+      "docs": "/core/useSessionStorage/",
+      "category": "State",
+      "description": "reactive [SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)"
     },
     {
       "name": "useStorage",
