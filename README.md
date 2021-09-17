@@ -12,7 +12,19 @@ npm i @svelte-use/core
 
 ```html
 <script>
-  import { usePreferredDark } from '@svelte-use/core'
+  import { usePreferredDark, usePreferredDark } from '@svelte-use/core'
+
+  // is user prefers dark theme
+  const isDark = usePreferredDark()
+
+  // persist state in localStorage
+  const storage = useLocalStorage({
+    'my-storage',
+    {
+      name: 'Apple',
+      color: 'red'
+    }
+  })
 </script>
 ```
 
