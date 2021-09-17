@@ -35,7 +35,7 @@ export function promiseTimeout(
   })
 }
 
-export function unReadable<T>(val: MaybeReadable<T>): T {
+export function unstore<T>(val: MaybeReadable<T>): T {
   return isReadable(val) ? get(val) : val
 }
 
