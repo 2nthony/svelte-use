@@ -1,6 +1,6 @@
 {
   "name": "@svelte-use/core",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Collection of essential Svelte Utilities",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@svelte-use/shared": "0.5.0",
-    "@svelte-use/store": "0.5.0"
+    "@svelte-use/shared": "0.6.0",
+    "@svelte-use/store": "0.6.0"
   }
 }
