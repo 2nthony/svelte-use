@@ -1,4 +1,4 @@
-import { Readable, Writable } from 'svelte/store'
+import { Readable, Updater, Writable } from 'svelte/store'
 /**
  * Any function
  */
@@ -26,6 +26,14 @@ export type MaybeReadable<T> = T | Readable<T>
  * ```
  */
 export type MaybeWritable<T> = T | Writable<T>
+
+/**
+ * A writable that allow to set/update `null` or `undefined`
+ */
+export type RemovableWritable<T> = Writable<T> & {
+  set(this: void, value: T | null | undefined): void
+  update(this: void, updater: Updater<T | null | undefined>): void
+}
 
 export interface Stopable {
   /**

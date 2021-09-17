@@ -23,6 +23,9 @@
 ### Sensors
   - [`useMutationObserver`](/core/useMutationObserver/) — watch for changes being made to the DOM tree
 
+### State
+  - [`useStorage`](/core/useStorage/) — reactive [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)/[SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
+
 ### Utilities
   - [`whenever`](/shared/whenever/) — shorthand for watching value to be truthy
 

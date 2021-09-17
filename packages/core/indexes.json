@@ -24,6 +24,7 @@
     "Browser",
     "Component",
     "Sensors",
+    "State",
     "Utilities"
   ],
   "functions": [
@@ -98,7 +99,9 @@
     {
       "name": "useStorage",
       "package": "core",
-      "internal": true
+      "docs": "/core/useStorage/",
+      "category": "State",
+      "description": "reactive [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)/[SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)"
     },
     {
       "name": "useTitle",
