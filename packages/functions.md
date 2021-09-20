@@ -7,6 +7,8 @@
 <!--GENERATED LIST, DO NOT MODIFY MANUALLY-->
 <!--FUNCTIONS_LIST_STARTS-->
 ### Animation
+  - [`useInterval`](/shared/useInterval/)
+  - [`useIntervalFn`](/shared/useIntervalFn/)
   - [`useTimeout`](/shared/useTimeout/) — update value after a given time with controls
   - [`useTimeoutFn`](/shared/useTimeoutFn/) — wrapper for `setTimeout` with controls
 
