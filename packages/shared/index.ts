@@ -1,5 +1,7 @@
 export * from './tryOnDestroy'
 export * from './tryOnMount'
+export * from './useInterval'
+export * from './useIntervalFn'
 export * from './useTimeout'
 export * from './useTimeoutFn'
 export * from './utils'

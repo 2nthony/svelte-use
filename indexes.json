@@ -43,6 +43,20 @@
       "description": "safe `onMount`"
     },
     {
+      "name": "useInterval",
+      "package": "shared",
+      "docs": "/shared/useInterval/",
+      "category": "Animation",
+      "description": "reactive counter increases on every interval"
+    },
+    {
+      "name": "useIntervalFn",
+      "package": "shared",
+      "docs": "/shared/useIntervalFn/",
+      "category": "Animation",
+      "description": "wrapper for `setInterval` with controls"
+    },
+    {
       "name": "useTimeout",
       "package": "shared",
       "docs": "/shared/useTimeout/",
