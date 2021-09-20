@@ -1,6 +1,6 @@
 {
   "name": "@svelte-use/shared",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "",
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@svelte-use/store": "0.6.0"
+    "@svelte-use/store": "0.7.0"
   }
 }

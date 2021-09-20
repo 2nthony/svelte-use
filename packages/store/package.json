@@ -1,6 +1,6 @@
 {
   "name": "@svelte-use/store",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Enhancement for svelte/store",
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@svelte-use/shared": "0.6.0"
+    "@svelte-use/shared": "0.7.0"
   }
 }
