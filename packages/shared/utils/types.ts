@@ -51,3 +51,20 @@ export interface Stopable {
    */
   start: Fn
 }
+
+export interface Pausable {
+  /**
+   * A readable indicate whether a pausable instance is active
+   */
+  isActive: Writable<boolean>
+
+  /**
+   * Temporary pause the effect from executing
+   */
+  pause: Fn
+
+  /**
+   * Resume the efffects
+   */
+  resume: Fn
+}
