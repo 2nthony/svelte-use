@@ -47,14 +47,14 @@
       "package": "shared",
       "docs": "/shared/useInterval/",
       "category": "Animation",
-      "description": ""
+      "description": "reactive counter increases on every interval"
     },
     {
       "name": "useIntervalFn",
       "package": "shared",
       "docs": "/shared/useIntervalFn/",
       "category": "Animation",
-      "description": ""
+      "description": "wrapper for `setInterval` with controls"
     },
     {
       "name": "useTimeout",
