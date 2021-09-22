@@ -49,7 +49,7 @@ const config = {
   description: 'Collection of essential Svelte Utilities',
   lang: 'en-US',
   themeConfig: {
-    //logo: '/favicon.svg',
+    logo: '/logo.png',
     repo: 'evillt/svelte-use',
     docsDir: 'packages',
     editLinks: true,
@@ -65,7 +65,7 @@ const config = {
         text: 'Functions',
         link: '/functions',
         items: indexes.categories
-          .filter(f => !f.startsWith('@'))
+          .filter((f) => !f.startsWith('@'))
           .map((c) => {
             return {
               text: c,
@@ -76,15 +76,16 @@ const config = {
       },
       {
         text: 'More',
-        items: [
-          { text: 'Playground', link: 'https://play.vueuse.org' },
-        ],
+        items: [{ text: 'Playground', link: 'https://play.vueuse.org' }],
       },
       {
         text: `v${currentVersion}`,
         items: [
-          { text: 'Release Notes', link: 'https://github.com/evillt/svelte-use/releases' },
-          { text: 'What\'s new', link: '/recently-updated' },
+          {
+            text: 'Release Notes',
+            link: 'https://github.com/evillt/svelte-use/releases',
+          },
+          { text: "What's new", link: '/recently-updated' },
           ...versions.map((i) => {
             if (i.version === currentVersion) {
               return {
@@ -115,19 +116,47 @@ const config = {
   },
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['link', { rel: 'icon', href: '/favicon-32x32.png', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['meta', { name: 'author', content: 'Anthony Fu' }],
+    ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
+    // ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'author', content: '2nthony' }],
     ['meta', { property: 'og:title', content: 'Svelte Use' }],
-    ['meta', { property: 'og:image', content: 'https://vueuse.org/og.png' }],
-    ['meta', { property: 'og:description', content: 'Collection of essential Svelte Utilities' }],
+    [
+      'meta',
+      { property: 'og:image', content: 'https://svelte-use.vercel.app/og.png' },
+    ],
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content: 'Collection of essential Svelte Utilities',
+      },
+    ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:creator', content: '@antfu7' }],
-    ['meta', { name: 'twitter:image', content: 'https://vueuse.org/og.png' }],
+    ['meta', { name: 'twitter:creator', content: '@evillt' }],
+    [
+      'meta',
+      {
+        name: 'twitter:image',
+        content: 'https://svelte-use.vercel.app/og.png',
+      },
+    ],
 
     ['link', { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }],
-    ['link', { rel: 'preconnect', crossorigin: 'anonymous', href: 'https://fonts.gstatic.com' }],
-    ['link', { href: 'https://fonts.googleapis.com/css2?family=Fira+Code&display=swap', rel: 'stylesheet' }],
+    [
+      'link',
+      {
+        rel: 'preconnect',
+        crossorigin: 'anonymous',
+        href: 'https://fonts.gstatic.com',
+      },
+    ],
+    [
+      'link',
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Fira+Code&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
   ],
 }
 
@@ -137,21 +166,24 @@ function getFunctionsSideBar() {
 
   categories
     .sort((a, b) => categoriesOrder.indexOf(a) - categoriesOrder.indexOf(b))
-    .sort((a, b) => a.startsWith('@') ? 1 : b.startsWith('@') ? -1 : 0)
+    .sort((a, b) => (a.startsWith('@') ? 1 : b.startsWith('@') ? -1 : 0))
 
   for (const name of categories) {
-    if (name.startsWith('_'))
-      continue
+    if (name.startsWith('_')) continue
 
-    const functions = indexes.functions.filter(i => i.category === name && !i.internal)
+    const functions = indexes.functions.filter(
+      (i) => i.category === name && !i.internal,
+    )
 
     links.push({
       text: name,
-      children: functions.map(i => ({
+      children: functions.map((i) => ({
         text: i.name,
         link: `/${i.package}/${i.name}/`,
       })),
-      link: name.startsWith('@') ? `/${functions[0].package}/README` : undefined,
+      link: name.startsWith('@')
+        ? `/${functions[0].package}/README`
+        : undefined,
     })
   }
 
@@ -159,4 +191,3 @@ function getFunctionsSideBar() {
 }
 
 module.exports = config
-

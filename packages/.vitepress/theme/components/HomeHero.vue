@@ -1,7 +1,8 @@
 <template>
   <header v-if="showHero" class="home-hero pt-25 pb-10 px-5">
     <p align="center">
-      <a href="https://github.com/vueuse/vueuse">
+      <a href="https://github.com/evillt/svelte-use">
+        <img src="/logo.png" alt="Svelte Use - Collection of essential Svelte Utilities">
       </a>
       <br />
     </p>
