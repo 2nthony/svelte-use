@@ -9,7 +9,7 @@ Shorthand for watching value to be truthy.
 ## usage
 
 ```ts
-import { whenever } from 'svelteuse'
+import { whenever } from '@svelte-use/core'
 
 let ready = true
 when(ready, (isReady) => {
