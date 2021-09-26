@@ -4,6 +4,7 @@ export default defineConfig({
   extract: {
     include: ['**/*.{vue,svelte}', '.vitepress/theme/**/*.{vue,svelte}'],
   },
+  attributify: true,
   theme: {
     extend: {
       colors: {

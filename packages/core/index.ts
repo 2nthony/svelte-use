@@ -1,3 +1,4 @@
+export * from './onClickOutside'
 export * from './useEventListener'
 export * from './useLocalStorage'
 export * from './useMediaQuery'
