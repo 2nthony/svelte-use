@@ -1,4 +1,8 @@
-import { MaybeReadable, toReadable, tryOnDestroy } from '@svelte-use/shared'
+import {
+  MaybeElementReadable,
+  toReadable,
+  tryOnDestroy,
+} from '@svelte-use/shared'
 import { ConfigurableWindow, defaultWindow } from '../_configurable'
 
 export interface MutationObserverOptions
@@ -15,7 +19,7 @@ export interface MutationObserverOptions
  * @param options
  */
 export function useMutationObserver(
-  target: MaybeReadable<Element | undefined | null>,
+  target: MaybeElementReadable,
   callback: MutationCallback,
   options: MutationObserverOptions = {},
 ) {
