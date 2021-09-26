@@ -23,6 +23,7 @@
   - [`tryOnMount`](/shared/tryOnMount/) — safe `onMount`
 
 ### Sensors
+  - [`onClickOutside`](/core/onClickOutside/) — list for clicks outside of an element
   - [`useMutationObserver`](/core/useMutationObserver/) — watch for changes being made to the DOM tree
 
 ### State

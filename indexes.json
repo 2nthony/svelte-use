@@ -83,6 +83,13 @@
       "description": "shorthand for watching value to be truthy"
     },
     {
+      "name": "onClickOutside",
+      "package": "core",
+      "docs": "/core/onClickOutside/",
+      "category": "Sensors",
+      "description": "list for clicks outside of an element"
+    },
+    {
       "name": "useEventListener",
       "package": "core",
       "docs": "/core/useEventListener/",
