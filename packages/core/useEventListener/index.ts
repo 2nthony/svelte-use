@@ -4,11 +4,10 @@ import {
   Fn,
   isString,
   noop,
-  isReadable,
   MaybeReadable,
   tryOnDestroy,
+  toReadable,
 } from '@svelte-use/shared'
-import { readable } from '@svelte-use/store'
 
 interface InferEventTarget<Events> {
   addEventListener(event: Events, fn?: any, options?: any): any
@@ -129,7 +128,7 @@ export function useEventListener(...args: any[]) {
 
   let cleanup = noop
 
-  const store = isReadable(target) ? target : readable(target)
+  const store = toReadable(target)
   store.subscribe((el) => {
     cleanup()
 
