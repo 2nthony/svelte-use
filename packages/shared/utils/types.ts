@@ -27,6 +27,10 @@ export type MaybeReadable<T> = T | Readable<T>
  */
 export type MaybeWritable<T> = T | Writable<T>
 
+export type MaybeElementReadable = MaybeReadable<
+  HTMLElement | SVGElement | undefined | null
+>
+
 /**
  * A writable that allow to set/update `null` or `undefined`
  */
