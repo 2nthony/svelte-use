@@ -1,4 +1,4 @@
-import { onDestroy } from 'svelte'
+import { tryOnDestroy } from '@svelte-use/shared'
 import { writable } from 'svelte/store'
 import { ConfigurableWindow, defaultWindow } from '../_configurable'
 
@@ -26,7 +26,7 @@ export function useMediaQuery(query: string, options: ConfigurableWindow = {}) {
 
   mediaQuery.addEventListener('change', handler)
 
-  onDestroy(() => {
+  tryOnDestroy(() => {
     mediaQuery.removeEventListener('change', handler)
   })
 
