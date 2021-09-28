@@ -10,7 +10,6 @@ Use EventListener with ease. Register using [addEventListener](https://developer
 
 ```html
 <script>
-  import { writable } from '@svelte-use/store'
   import { useEventListener } from '@svelte-use/core'
 
   useEventListener(document, 'visibilitychange', (evt) => {
@@ -23,6 +22,7 @@ You can also pass a `writable/readable` as the event target, `useEventListener` 
 
 ```js
 <script>
+  import { writable } from '@svelte-use/store'
   import { useEventListener } from '@svelte-use/core'
 
   const el = writable()
