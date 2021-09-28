@@ -35,3 +35,14 @@ Simply importing the functions you need from `@svelte-use/core`
 ```
 
 Refer to [functions list](/functions) for more details.
+
+:::warning
+
+We use the `writable` as element binding a lot in usage example.
+
+```js
+const el = writable()
+<div bind:this={$el}></div>
+```
+
+:::

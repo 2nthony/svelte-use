@@ -1,14 +1,16 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
+  import { writable } from '@svelte-use/store'
   import { useMutationObserver } from '.'
 
-  let el: HTMLDivElement
+  const el = writable<HTMLDivElement>()
+
   let messages: string[] = []
   let className = ''
   let style = ''
 
-  onMount(() => {
-    useMutationObserver(el, mutations => {
+  useMutationObserver(
+    el,
+    (mutations) => {
       const mutation = mutations[0]
 
       if (!mutation) {
@@ -17,8 +19,9 @@
 
       messages.push(mutation.attributeName!)
       messages = messages
-    }, { attributes: true })
-  })
+    },
+    { attributes: true },
+  )
 
   setTimeout(() => {
     className = 'test test2'
@@ -29,8 +32,8 @@
   }, 1550)
 </script>
 
-<div bind:this={el} class={className} style={style}>
+<div bind:this={$el} class={className} {style}>
   {#each messages as text}
-    <div>Mutation Attribute: { text }</div>
+    <div>Mutation Attribute: {text}</div>
   {/each}
 </div>

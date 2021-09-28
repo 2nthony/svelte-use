@@ -20,21 +20,19 @@ Use EventListener with ease. Register using [addEventListener](https://developer
 
 You can also pass a `writable/readable` as the event target, `useEventListener` will unregister the previous event and register the new one when you change the target.
 
-```html
+```js
 <script>
   import { useEventListener } from '@svelte-use/core'
 
-  let el
-  const elStore = writable(el)
-  useEventListener(elStore, 'click', (evt) => {
+  const el = writable()
+  useEventListener(el, 'click', (evt) => {
     console.log(evt)
   })
-  $: elStore.set(el) // <--
 </script>
 
 {#if cond}
-<div bind:this="{el}">Div1</div>
+<div bind:this={$el}>Div1</div>
 {:else}
-<div bind:this="{el}">Div2</div>
+<div bind:this={$el}>Div2</div>
 {/if}
 ```

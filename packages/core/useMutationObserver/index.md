@@ -8,24 +8,25 @@ Watch for changes being made to the DOM tree. [MutationObserver MDN](https://dev
 
 ## Usage
 
-```html
+```js
 <script>
+  import { writable } from '@svelte-use/store'
   import { useMutationObserver } from '@svelte-use/core'
 
-  let el
+  const el = writable()
   let messages = []
 
-  onMount(() => {
-    useMutationObserver(
-      el,
-      (mutations) => {
-        if (!mutations[0]) {
-          messages.push(mutations[0].attributeName)
-          messages = messages
-        }
-      },
-      { attributes: true },
-    )
-  })
+  useMutationObserver(
+    el,
+    (mutations) => {
+      if (!mutations[0]) {
+        messages.push(mutations[0].attributeName)
+        messages = messages
+      }
+    },
+    { attributes: true },
+  )
 </script>
+
+<div bind:this={$el}></div>
 ```
