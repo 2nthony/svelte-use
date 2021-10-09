@@ -17,4 +17,3 @@ export const packages: PackageManifest[] = [
   }
 ]
 
-export const activePackages = packages.filter((i) => !i.deprecated)

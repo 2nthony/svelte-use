@@ -5,7 +5,7 @@ import fg from 'fast-glob'
 import parser from 'prettier/parser-typescript'
 import prettier from 'prettier'
 import YAML from 'js-yaml'
-import { activePackages, packages } from '../meta/packages'
+import { packages } from '../meta/packages'
 import { PackageIndexes, SvelteUseFunction, SvelteUsePackage } from '../meta/types'
 
 const DOCS_URL = ''
@@ -348,7 +348,7 @@ export async function updatePackageJSON(indexes: PackageIndexes) {
     description,
     author,
     submodules,
-  } of activePackages) {
+  } of packages) {
     const packageDir = join(DIR_SRC, name)
     const packageJSONPath = join(packageDir, 'package.json')
     const packageJSON = await fs.readJSON(packageJSONPath)
@@ -383,11 +383,6 @@ export async function updatePackageJSON(indexes: PackageIndexes) {
             require: `./${i.name}.cjs`,
           }
         })
-    }
-
-    for (const key of Object.keys(packageJSON.dependencies || {})) {
-      if (key.startsWith('@svelte-use/'))
-        packageJSON.dependencies[key] = version
     }
 
     await fs.writeJSON(packageJSONPath, packageJSON, { spaces: 2 })
