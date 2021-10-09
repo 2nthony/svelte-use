@@ -3,9 +3,6 @@
   "version": "0.8.1",
   "private": true,
   "description": "Collection of essential Svelte Utilities",
-  "workspaces": [
-    "packages/*"
-  ],
   "author": "2nthony <https://github.com/evillt>",
   "license": "MIT",
   "scripts": {
@@ -21,7 +18,8 @@
     "release": "esno scripts/release.ts && git push --follow-tags",
     "update": "esno scripts/update.ts",
     "update:full": "esno scripts/update.ts && npm run build:types && npm run update:recent",
-    "update:recent": "esno scripts/recently-updated.ts"
+    "update:recent": "esno scripts/recently-updated.ts",
+    "test": "echo TEST TODO"
   },
   "devDependencies": {
     "@iconify/json": "^1.1.399",

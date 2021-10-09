@@ -41,13 +41,13 @@ async function buildMetaFiles() {
 
 async function build() {
   consola.info('Clean up')
-  exec('yarn run clean', { stdio: 'inherit' })
+  exec('pnpm run clean', { stdio: 'inherit' })
 
   consola.info('Generate Imports')
   await updateImport(indexes)
 
   consola.info('Rollup')
-  exec('yarn run build:rollup', { stdio: 'inherit' })
+  exec('pnpm run build:rollup', { stdio: 'inherit' })
 
   await buildMetaFiles()
 }
