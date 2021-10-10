@@ -1,18 +1,26 @@
 ---
-category: Utilities
+category: Watch
 ---
 
 # whenever
 
 Shorthand for watching value to be truthy.
 
-## usage
+## Usage
 
 ```ts
 import { whenever } from '@svelte-use/core'
 
-let ready = true
-when(ready, (isReady) => {
+const ready = writable(false)
+when(ready, () => console.log('ready'))
+```
+
+```ts
+// this
+whenever(ready, () => console.log('ready'))
+
+// is equivalent to:
+whenever(ready, (isReady) => {
   if (isReady) {
     console.log('ready')
   }
