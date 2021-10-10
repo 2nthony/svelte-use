@@ -6,33 +6,35 @@ on:
       - v*
 
 jobs:
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v1
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: yarn install --frozen-lockfile
-  #     - run: yarn test
-
   publish-npm:
     # needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         with:
-          node-version: 14
+          version: 6.15.1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org/
-      - run: npm i -g @antfu/ni
-      - run: nci
-      - run: nr test # todo
-      - run: npx conventional-github-releaser -p angular
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - run: pnr test # todo
+
+      - run: pnpx conventional-github-releaser -p angular
         continue-on-error: true
         env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: nr publish:ci
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: pnr publish:ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_OPTIONS: '--max-old-space-size=6144'
