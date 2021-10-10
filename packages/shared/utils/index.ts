@@ -1,5 +1,6 @@
 import { get_current_component } from 'svelte/internal'
-import { get, readable } from '@svelte-use/store'
+import { readable } from '../readable'
+import { get } from 'svelte/store'
 import { MaybeReadable, MaybeWritable } from './types'
 import { isReadable, isWritable } from './is'
 import { Readable, writable, Writable } from 'svelte/store'

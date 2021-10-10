@@ -10,8 +10,7 @@ Watch for changes being made to the DOM tree. [MutationObserver MDN](https://dev
 
 ```js
 <script>
-  import { writable } from '@svelte-use/store'
-  import { useMutationObserver } from '@svelte-use/core'
+  import { writable, useMutationObserver } from '@svelte-use/core'
 
   const el = writable()
   let messages = []

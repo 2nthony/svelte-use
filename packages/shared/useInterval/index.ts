@@ -1,4 +1,4 @@
-import { writable } from '@svelte-use/store'
+import { writable } from '../writable'
 import { Writable } from 'svelte/store'
 import { useIntervalFn } from '../useIntervalFn'
 import { Pausable } from '../utils'

@@ -22,8 +22,7 @@ You can also pass a `writable/readable` as the event target, `useEventListener` 
 
 ```js
 <script>
-  import { writable } from '@svelte-use/store'
-  import { useEventListener } from '@svelte-use/core'
+  import { writable, useEventListener } from '@svelte-use/core'
 
   const el = writable()
   useEventListener(el, 'click', (evt) => {

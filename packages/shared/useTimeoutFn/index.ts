@@ -1,5 +1,5 @@
 import { isClient, Stopable } from '../utils'
-import { writable } from '@svelte-use/store'
+import { writable } from '../writable'
 import { tryOnDestroy } from '../tryOnDestroy'
 
 export interface TimeoutFnOptions {

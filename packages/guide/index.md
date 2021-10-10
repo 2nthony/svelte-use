@@ -8,7 +8,7 @@ Svelte Use is a collection of utility functions.
 
 ```bash
 npm i @svelte-use/core
-# yarn add @svelte-use
+# yarn add @svelte-use/core
 # pnpm i @svelte-use/core
 ```
 

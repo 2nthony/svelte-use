@@ -10,24 +10,25 @@
       "display": "SvelteUse",
       "description": "Collection of essential Svelte Utilities",
       "dir": "packages/core"
-    },
-    "store": {
-      "name": "store",
-      "display": "Store",
-      "description": "Enhancement for svelte/store",
-      "dir": "packages/store"
     }
   },
   "categories": [
-    "@Store",
     "Animation",
     "Browser",
     "Component",
     "Sensors",
     "State",
+    "Store",
     "Utilities"
   ],
   "functions": [
+    {
+      "name": "readable",
+      "package": "shared",
+      "docs": "/shared/readable/",
+      "category": "Store",
+      "description": "auto unsubscribe on destory for `readable`"
+    },
     {
       "name": "tryOnDestroy",
       "package": "shared",
@@ -81,6 +82,13 @@
       "docs": "/shared/whenever/",
       "category": "Utilities",
       "description": "shorthand for watching value to be truthy"
+    },
+    {
+      "name": "writable",
+      "package": "shared",
+      "docs": "/shared/writable/",
+      "category": "Store",
+      "description": "auto unsubscribe on destory for `writable`"
     },
     {
       "name": "onClickOutside",
@@ -144,34 +152,6 @@
       "docs": "/core/useTitle/",
       "category": "Browser",
       "description": "reactive document title"
-    },
-    {
-      "name": "derived",
-      "package": "store",
-      "docs": "/store/derived/",
-      "category": "@Store",
-      "description": "origin [derived](https://svelte.dev/docs#derived)"
-    },
-    {
-      "name": "get",
-      "package": "store",
-      "docs": "/store/get/",
-      "category": "@Store",
-      "description": "origin [get](https://svelte.dev/docs#get)"
-    },
-    {
-      "name": "readable",
-      "package": "store",
-      "docs": "/store/readable/",
-      "category": "@Store",
-      "description": "auto unsubscribe on destory for `readable`"
-    },
-    {
-      "name": "writable",
-      "package": "store",
-      "docs": "/store/writable/",
-      "category": "@Store",
-      "description": "auto unsubscribe on destory for `writable`"
     }
   ]
 }

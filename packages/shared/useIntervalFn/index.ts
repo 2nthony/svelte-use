@@ -1,5 +1,5 @@
-import { tryOnDestroy } from '@svelte-use/core'
-import { writable } from '@svelte-use/store'
+import { tryOnDestroy } from '../tryOnDestroy'
+import { writable } from '../writable'
 import { Fn, isClient, Pausable } from '../utils'
 
 export interface IntervalFnOptions {

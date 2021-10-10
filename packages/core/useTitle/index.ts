@@ -1,5 +1,5 @@
 import { isString, MaybeWritable, toWritable } from '@svelte-use/shared'
-import { get } from '@svelte-use/store'
+import { get } from 'svelte/store'
 import { useMutationObserver } from '../useMutationObserver'
 import { ConfigurableDocument, defaultDocument } from '../_configurable'
 
