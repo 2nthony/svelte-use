@@ -40,6 +40,7 @@ importers:
       simple-git: ^2.46.0
       svelte: ^3.43.1
       svelte-preprocess: ^4.9.8
+      tslib: ^2.3.1
       typescript: ^4.4.3
       unplugin-icons: ^0.7.6
       unplugin-vue-components: ^0.14.13
@@ -51,7 +52,7 @@ importers:
     devDependencies:
       '@iconify/json': 1.1.412
       '@rollup/plugin-replace': 3.0.0_rollup@2.58.0
-      '@rollup/plugin-typescript': 8.2.5_rollup@2.58.0+typescript@4.4.3
+      '@rollup/plugin-typescript': 8.2.5_937b027edc6bd00c4da867df42fb955d
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.27_svelte@3.43.1+vite@2.6.5
       '@types/fs-extra': 9.0.13
       '@types/jest': 27.0.2
@@ -85,6 +86,7 @@ importers:
       simple-git: 2.46.0
       svelte: 3.43.1
       svelte-preprocess: 4.9.8_1602f0a72c53a415ed0f5caf0212ff34
+      tslib: 2.3.1
       typescript: 4.4.3
       unplugin-icons: 0.7.6_03cc4fa8e782fb7144e98c89f25f3261
       unplugin-vue-components: 0.14.13_49edc9e26c13b115f771e3f10382d526
@@ -493,7 +495,7 @@ packages:
       rollup: 2.58.0
     dev: true
 
-  /@rollup/plugin-typescript/8.2.5_rollup@2.58.0+typescript@4.4.3:
+  /@rollup/plugin-typescript/8.2.5_937b027edc6bd00c4da867df42fb955d:
     resolution: {integrity: sha512-QL/LvDol/PAGB2O0S7/+q2HpSUNodpw7z6nGn9BfoVCPOZ0r4EALrojFU29Bkoi2Hr2jgTocTejJ5GGWZfOxbQ==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -504,6 +506,7 @@ packages:
       '@rollup/pluginutils': 3.1.0_rollup@2.58.0
       resolve: 1.20.0
       rollup: 2.58.0
+      tslib: 2.3.1
       typescript: 4.4.3
     dev: true
 
@@ -3061,7 +3064,6 @@ packages:
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
     dev: true
-    optional: true
 
   /type-detect/4.0.8:
     resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==}
