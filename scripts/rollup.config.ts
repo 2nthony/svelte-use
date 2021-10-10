@@ -3,11 +3,11 @@ import typescript from 'rollup-plugin-typescript2'
 import dts from 'rollup-plugin-dts'
 import { OutputOptions, RollupOptions } from 'rollup'
 import fg from 'fast-glob'
-import { activePackages } from '../meta/packages'
+import { packages } from '../meta/packages'
 
 const configs: RollupOptions[] = []
 
-for (const { name, external, submodules } of activePackages) {
+for (const { name, external, submodules } of packages) {
   const functionNames = ['index']
 
   if (submodules)
