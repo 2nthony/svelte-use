@@ -10,10 +10,4 @@ export const packages: PackageManifest[] = [
     display: 'SvelteUse',
     description: 'Collection of essential Svelte Utilities',
   },
-  {
-    name: 'store',
-    display: 'Store',
-    description: 'Enhancement for svelte/store',
-  }
 ]
-

@@ -1,5 +1,5 @@
 ---
-category: '@Store'
+category: Store
 ---
 
 # writable
@@ -10,7 +10,7 @@ Auto unsubscribe on destory for `writable` .
 
 ```html
 <script>
-  import { writable } from '@svelte-use/store'
+  import { writable } from '@svelte-use/core'
 
   const count = writable(0)
 </script>

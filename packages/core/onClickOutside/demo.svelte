@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { writable } from '@svelte-use/store'
-  import { onClickOutside, onClickOutside } from '.'
+  import { writable } from '@svelte-use/shared'
+  import { onClickOutside } from '.'
 
   const modal = writable(false)
   const modalEl = writable<HTMLDivElement>()

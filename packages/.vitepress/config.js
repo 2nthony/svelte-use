@@ -8,6 +8,7 @@ const categoriesOrder = [
   'Sensors',
   'Animation',
   'State',
+  'Store',
   'Component',
   'Watch',
   'Formatters',

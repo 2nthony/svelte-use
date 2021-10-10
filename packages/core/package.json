@@ -29,7 +29,6 @@
     "./*": "./*"
   },
   "dependencies": {
-    "@svelte-use/shared": "workspace:*",
-    "@svelte-use/store": "workspace:*"
+    "@svelte-use/shared": "workspace:*"
   }
 }

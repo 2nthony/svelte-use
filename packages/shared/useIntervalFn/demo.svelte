@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { writable } from '@svelte-use/store'
+  import { writable } from '../writable'
   import { useIntervalFn } from '.'
 
   const greetings = [

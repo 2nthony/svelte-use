@@ -1,7 +1,7 @@
 import { Writable } from 'svelte/store'
 import { noop, Stopable } from '../utils'
 import { TimeoutFnOptions, useTimeoutFn } from '../useTimeoutFn'
-import { readable } from '@svelte-use/store'
+import { readable } from '../readable'
 
 export interface TimeoutOptions<Controls extends boolean>
   extends TimeoutFnOptions {

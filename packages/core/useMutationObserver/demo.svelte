@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { writable } from '@svelte-use/store'
+  import { writable } from '@svelte-use/shared'
   import { useMutationObserver } from '.'
 
   const el = writable<HTMLDivElement>()

@@ -31,6 +31,10 @@
   - [`useSessionStorage`](/core/useSessionStorage/) — reactive [SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
   - [`useStorage`](/core/useStorage/) — reactive [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)/[SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 
+### Store
+  - [`readable`](/shared/readable/) — auto unsubscribe on destory for `readable`
+  - [`writable`](/shared/writable/) — auto unsubscribe on destory for `writable`
+
 ### Utilities
   - [`whenever`](/shared/whenever/) — shorthand for watching value to be truthy
 

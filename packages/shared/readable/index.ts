@@ -1,8 +1,5 @@
-import { noop } from '@svelte-use/shared'
-import {
-  Readable,
-  StartStopNotifier,
-} from 'svelte/store'
+import { noop } from '../utils'
+import { Readable, StartStopNotifier } from 'svelte/store'
 import { writable } from '../writable'
 
 export function readable<T>(

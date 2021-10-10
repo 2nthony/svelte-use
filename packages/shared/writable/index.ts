@@ -1,4 +1,5 @@
-import { Fn, noop, runAll, tryOnDestroy } from '@svelte-use/shared'
+import { Fn, noop, runAll } from '../utils'
+import { tryOnDestroy } from '../tryOnDestroy'
 import {
   writable as _writable,
   get,

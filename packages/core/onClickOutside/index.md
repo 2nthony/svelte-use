@@ -10,8 +10,7 @@ List for clicks outside of an element. Useful for modal or dropdown.
 
 ```js
 <script>
-  import { writable } from '@svelte-use/store'
-  import { onClickOutside } from '@svelte-use/core'
+  import { writable, onClickOutside } from '@svelte-use/core'
 
   const target = writable()
 
