@@ -19,7 +19,7 @@
     "Sensors",
     "State",
     "Store",
-    "Utilities"
+    "Watch"
   ],
   "functions": [
     {
@@ -80,7 +80,7 @@
       "name": "whenever",
       "package": "shared",
       "docs": "/shared/whenever/",
-      "category": "Utilities",
+      "category": "Watch",
       "description": "shorthand for watching value to be truthy"
     },
     {

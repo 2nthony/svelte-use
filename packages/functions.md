@@ -35,7 +35,7 @@
   - [`readable`](/shared/readable/) — auto unsubscribe on destory for `readable`
   - [`writable`](/shared/writable/) — auto unsubscribe on destory for `writable`
 
-### Utilities
+### Watch
   - [`whenever`](/shared/whenever/) — shorthand for watching value to be truthy
 
 
