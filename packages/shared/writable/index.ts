@@ -13,6 +13,12 @@ import {
  * It would be better if export this from source code
  *
  * @see https://github.com/sveltejs/svelte/blob/c040f130b761a6aae64590999516adec5bb89680/src/runtime/store/index.ts#L13
+ *
+ * The Svelte team will not going to exported
+ * https://github.com/sveltejs/svelte/pull/5887#discussion_r598125836
+ * https://github.com/sveltejs/svelte/pull/6836#issuecomment-940899369
+ *
+ * Keep this
  */
 type Invalidator<T> = (value?: T) => void
 
