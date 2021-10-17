@@ -30,6 +30,7 @@ const Functions = [
   { text: 'Misc', link: '/functions#misc' },
   { text: 'Sensors', link: '/functions#sensors' },
   { text: 'State', link: '/functions#state' },
+  { text: 'Store', link: '/functions#store' },
   { text: 'Utilities', link: '/functions#utilities' },
   { text: 'Watch', link: '/functions#watch' },
 ]
