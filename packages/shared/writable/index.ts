@@ -1,4 +1,4 @@
-import { Fn, noop, runAll } from '../utils'
+import { Fn, noop, runAll, tryGetCurrentComponent } from '../utils'
 import { tryOnDestroy } from '../tryOnDestroy'
 import {
   writable as _writable,
@@ -7,6 +7,7 @@ import {
   Updater,
   Subscriber,
   StartStopNotifier,
+  Unsubscriber,
 } from 'svelte/store'
 
 /**
@@ -33,10 +34,17 @@ export function writable<T>(
   const runs: Set<Run> = new Set()
   const invalidates: Set<Invalidate> = new Set()
 
-  const unsubscribe = s.subscribe(
-    (val) => runAll([...runs], val),
-    (val) => runAll([...invalidates], val),
-  )
+  let unsubscribe: Unsubscriber | undefined
+  const prepareUnsubscribe = () => {
+    unsubscribe = s.subscribe(
+      (val) => runAll([...runs], val),
+      (val) => runAll([...invalidates], val),
+    )
+  }
+
+  if (tryGetCurrentComponent()) {
+    prepareUnsubscribe()
+  }
 
   function set(newValue: T): void {
     s.set(newValue)
@@ -47,6 +55,10 @@ export function writable<T>(
   }
 
   function subscribe(run: Run = noop, invalidate: Invalidate = noop) {
+    if (!unsubscribe) {
+      prepareUnsubscribe()
+    }
+
     runs.add(run)
     invalidates.add(invalidate)
 
@@ -64,7 +76,9 @@ export function writable<T>(
     runs.clear()
     invalidates.clear()
 
-    unsubscribe()
+    if (unsubscribe) {
+      unsubscribe()
+    }
   }
 
   tryOnDestroy(stop)
