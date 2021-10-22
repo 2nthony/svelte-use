@@ -133,6 +133,13 @@
       "description": "reactive dark theme preference"
     },
     {
+      "name": "useRafFn",
+      "package": "core",
+      "docs": "/core/useRafFn/",
+      "category": "Animation",
+      "description": ""
+    },
+    {
       "name": "useSessionStorage",
       "package": "core",
       "docs": "/core/useSessionStorage/",
