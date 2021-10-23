@@ -1,6 +1,6 @@
-import { Fn, Pausable, tryOnDestroy, writable } from "@svelte-use/shared";
-import { get } from "svelte/store";
-import { ConfigurableWindow, defaultWindow } from "../_configurable";
+import { Fn, Pausable, tryOnDestroy, writable } from '@svelte-use/shared'
+import { get } from 'svelte/store'
+import { ConfigurableWindow, defaultWindow } from '../_configurable'
 
 export interface RafFnOptions extends ConfigurableWindow {
   /**
