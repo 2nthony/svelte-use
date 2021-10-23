@@ -137,7 +137,7 @@
       "package": "core",
       "docs": "/core/useRafFn/",
       "category": "Animation",
-      "description": ""
+      "description": "call function on every `requestAnimationFrame`"
     },
     {
       "name": "useSessionStorage",

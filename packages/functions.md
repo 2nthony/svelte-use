@@ -9,7 +9,7 @@
 ### Animation
   - [`useInterval`](/shared/useInterval/) — reactive counter increases on every interval
   - [`useIntervalFn`](/shared/useIntervalFn/) — wrapper for `setInterval` with controls
-  - [`useRafFn`](/core/useRafFn/)
+  - [`useRafFn`](/core/useRafFn/) — call function on every `requestAnimationFrame`
   - [`useTimeout`](/shared/useTimeout/) — update value after a given time with controls
   - [`useTimeoutFn`](/shared/useTimeoutFn/) — wrapper for `setTimeout` with controls
 
