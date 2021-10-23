@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@2nthony/prettier-config': ^1.0.0
       '@iconify/json': ^1.1.412
       '@rollup/plugin-replace': ^3.0.0
       '@rollup/plugin-typescript': ^8.2.5
@@ -50,6 +51,7 @@ importers:
       vue: ^3.2.20
       vue-demi: ^0.11.4
     devDependencies:
+      '@2nthony/prettier-config': 1.0.0
       '@iconify/json': 1.1.412
       '@rollup/plugin-replace': 3.0.0_rollup@2.58.0
       '@rollup/plugin-typescript': 8.2.5_937b027edc6bd00c4da867df42fb955d
@@ -106,6 +108,10 @@ importers:
     specifiers: {}
 
 packages:
+
+  /@2nthony/prettier-config/1.0.0:
+    resolution: {integrity: sha512-vAXvJAYvqjHNsH3CecHSGkdtRXLrxV5hou4icndEof8e2iFKTxwvNT7cIY2ur3tkItWWTe7GIP4qoB0v4Wgjdg==}
+    dev: true
 
   /@algolia/cache-browser-local-storage/4.10.5:
     resolution: {integrity: sha512-cfX2rEKOtuuljcGI5DMDHClwZHdDqd2nT2Ohsc8aHtBiz6bUxKVyIqxr2gaC6tU8AgPtrTVBzcxCA+UavXpKww==}

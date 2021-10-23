@@ -1,6 +1,1 @@
-{
-  "semi": false,
-  "singleQuote": true,
-  "bracketSpacing": true,
-  "trailingComma": "all"
-}
+"@2nthony/prettier-config"
