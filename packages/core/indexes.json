@@ -19,6 +19,7 @@
     "Sensors",
     "State",
     "Store",
+    "Utilities",
     "Watch"
   ],
   "functions": [
@@ -96,6 +97,13 @@
       "docs": "/core/onClickOutside/",
       "category": "Sensors",
       "description": "list for clicks outside of an element"
+    },
+    {
+      "name": "useAsyncState",
+      "package": "core",
+      "docs": "/core/useAsyncState/",
+      "category": "Utilities",
+      "description": "reactive async state"
     },
     {
       "name": "useEventListener",

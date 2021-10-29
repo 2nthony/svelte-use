@@ -1,4 +1,5 @@
 export * from './onClickOutside'
+export * from './useAsyncState'
 export * from './useEventListener'
 export * from './useLocalStorage'
 export * from './useMediaQuery'
