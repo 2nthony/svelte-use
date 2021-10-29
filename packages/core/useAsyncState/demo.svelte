@@ -1,0 +1,25 @@
+<script lang="ts">
+import axios from 'axios'
+import YAML from 'js-yaml'
+import { useAsyncState } from '.'
+
+const { state, isReady, execute } = useAsyncState(
+  (args) => {
+    const id = args?.id || 1
+    return axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`).then(res => res.data)
+  },
+  {},
+  {
+    delay: 2000,
+    resetOnExecute: false
+  }
+)
+</script>
+
+<div>
+  <note>Ready: { $isReady.toString() }</note>
+  <pre lang="json" class="ml-2">{ YAML.dump($state) }</pre>
+  <button on:click={() => execute(2000, { id: 2 })}>
+    Execute
+  </button>
+</div>
