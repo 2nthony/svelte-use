@@ -33,6 +33,7 @@
     "@types/node": "^16.10.3",
     "@types/prettier": "^2.4.1",
     "@vueuse/core": "^6.5.3",
+    "axios": "^0.24.0",
     "bumpp": "^7.1.1",
     "commitizen": "^4.2.4",
     "consola": "^2.15.3",
