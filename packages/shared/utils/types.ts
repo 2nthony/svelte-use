@@ -5,6 +5,11 @@ import { Readable, Updater, Writable } from 'svelte/store'
 export type Fn = (...args: any[]) => void
 
 /**
+ * Any promise function
+ */
+export type PromiseFn<T> = (...args: any[]) => Promise<T>
+
+/**
  * Infers the element type of an array
  */
 export type ElementOf<T> = T extends (infer E)[] ? E : never
