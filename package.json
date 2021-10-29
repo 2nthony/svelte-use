@@ -1,6 +1,6 @@
 {
   "name": "@svelte-use/monorepo",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "private": true,
   "description": "Collection of essential Svelte Utilities",
   "author": "2nthony <https://github.com/evillt>",
