@@ -56,7 +56,7 @@ export function useAsyncState<T>(
     resetOnExecute = true,
   } = options
 
-  const state = writable(initialState)
+  const state = writable<T>(initialState)
   const isReady = writable(false)
   const error = writable<unknown | undefined>(undefined)
 
