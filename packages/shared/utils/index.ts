@@ -1,9 +1,10 @@
 import { get_current_component } from 'svelte/internal'
 import { readable } from '../readable'
+import { writable } from '../writable'
 import { get } from 'svelte/store'
 import { MaybeReadable, MaybeWritable } from './types'
 import { isReadable, isWritable } from './is'
-import { Readable, writable, Writable } from 'svelte/store'
+import { Readable, Writable } from 'svelte/store'
 
 export * from './is'
 export * from './types'
