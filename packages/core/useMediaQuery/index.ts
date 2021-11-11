@@ -1,5 +1,4 @@
-import { tryOnDestroy } from '@svelte-use/shared'
-import { writable } from 'svelte/store'
+import { tryOnDestroy, writable } from '@svelte-use/shared'
 import { ConfigurableWindow, defaultWindow } from '../_configurable'
 
 /**
