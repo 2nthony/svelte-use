@@ -41,7 +41,15 @@ export function unstore<T>(val: MaybeReadable<T>): T {
   return isReadable(val) ? get(val) : val
 }
 
-export function toReadable<T>(val: MaybeReadable<T>): Readable<T> {
+export function toReadable<T>(
+  val: MaybeReadable<T> | MaybeWritable<T>,
+): Readable<T> {
+  if (isWritable(val)) {
+    return {
+      subscribe: val.subscribe,
+    }
+  }
+
   return isReadable(val) ? val : readable(val)
 }
 
