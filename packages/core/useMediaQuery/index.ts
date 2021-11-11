@@ -1,4 +1,4 @@
-import { tryOnDestroy, writable } from '@svelte-use/shared'
+import { toReadable, tryOnDestroy, writable } from '@svelte-use/shared'
 import { ConfigurableWindow, defaultWindow } from '../_configurable'
 
 /**
@@ -29,5 +29,5 @@ export function useMediaQuery(query: string, options: ConfigurableWindow = {}) {
     mediaQuery.removeEventListener('change', handler)
   })
 
-  return matches
+  return toReadable(matches)
 }
