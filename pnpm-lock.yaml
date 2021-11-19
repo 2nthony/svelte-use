@@ -11,7 +11,7 @@ importers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.30
       '@types/fs-extra': 9.0.13
       '@types/jest': 27.0.2
-      '@types/js-yaml': 4.0.4
+      '@types/js-yaml': 4.0.5
       '@types/node': 16.11.7
       '@types/prettier': 2.4.2
       '@vueuse/core': 6.9.1
@@ -59,7 +59,7 @@ importers:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.1+vite@2.6.14
       '@types/fs-extra': 9.0.13
       '@types/jest': 27.0.2
-      '@types/js-yaml': 4.0.4
+      '@types/js-yaml': 4.0.5
       '@types/node': 16.11.7
       '@types/prettier': 2.4.2
       '@vueuse/core': 6.9.1_vue@3.2.22
@@ -594,8 +594,8 @@ packages:
       pretty-format: 27.3.1
     dev: true
 
-  /@types/js-yaml/4.0.4:
-    resolution: {integrity: sha512-AuHubXUmg0AzkXH0Mx6sIxeY/1C110mm/EkE/gB1sTRz3h2dao2W/63q42SlVST+lICxz5Oki2hzYA6+KnnieQ==}
+  /@types/js-yaml/4.0.5:
+    resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==}
     dev: true
 
   /@types/linkify-it/3.0.2:
