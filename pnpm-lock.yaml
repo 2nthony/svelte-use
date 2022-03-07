@@ -14,7 +14,7 @@ importers:
       '@types/js-yaml': 4.0.4
       '@types/node': 16.11.7
       '@types/prettier': 2.4.2
-      '@vueuse/core': 6.9.1
+      '@vueuse/core': 7.7.1
       axios: 0.24.0
       bumpp: 7.1.1
       commitizen: 4.2.4
@@ -62,7 +62,7 @@ importers:
       '@types/js-yaml': 4.0.4
       '@types/node': 16.11.7
       '@types/prettier': 2.4.2
-      '@vueuse/core': 6.9.1_vue@3.2.22
+      '@vueuse/core': 7.7.1_vue@3.2.22
       axios: 0.24.0
       bumpp: 7.1.1
       commitizen: 4.2.4
@@ -810,8 +810,8 @@ packages:
     resolution: {integrity: sha512-qWVav014mpjEtbWbEgl0q9pEyrrIySKum8UVYjwhC6njrKzknLZPvfuYdQyVbApsqr94tf/3dP4pCuZmmjdCWQ==}
     dev: true
 
-  /@vueuse/core/6.9.1_vue@3.2.22:
-    resolution: {integrity: sha512-msa36DxnnbIu41bUTvfSudF6TL4wo0+Yrpw6yr1bFtwtYTOo8GZXYWPKyvXUVGhBBqrTVNTqsTtD0eXXHJ3roA==}
+  /@vueuse/core/7.7.1_vue@3.2.22:
+    resolution: {integrity: sha512-PRRgbATMpoeUmkCEBtUeJgOwtew8s+4UsEd+Pm7MhkjL2ihCNrSqxNVtM6NFE4uP2sWnkGcZpCjPuNSxowJ1Ow==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -821,13 +821,13 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@vueuse/shared': 6.9.1_vue@3.2.22
+      '@vueuse/shared': 7.7.1_vue@3.2.22
       vue: 3.2.22
       vue-demi: 0.11.4_vue@3.2.22
     dev: true
 
-  /@vueuse/shared/6.9.1_vue@3.2.22:
-    resolution: {integrity: sha512-nQh+ayxkeCKUU9MZjyQpE7KfOb18e/QOHolOE2ZK5dpoHzCZK7MSXzgDtvb9omGkgK0mjXlLSJsVdGhG+QW7Aw==}
+  /@vueuse/shared/7.7.1_vue@3.2.22:
+    resolution: {integrity: sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
