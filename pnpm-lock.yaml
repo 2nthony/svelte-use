@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@2nthony/prettier-config': 1.0.0
-      '@iconify/json': 1.1.428
+      '@iconify/json': 1.1.461
       '@rollup/plugin-replace': 3.0.0
       '@rollup/plugin-typescript': 8.3.0
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.30
@@ -53,7 +53,7 @@ importers:
       vue-demi: 0.11.4
     devDependencies:
       '@2nthony/prettier-config': 1.0.0
-      '@iconify/json': 1.1.428
+      '@iconify/json': 1.1.461
       '@rollup/plugin-replace': 3.0.0_rollup@2.60.0
       '@rollup/plugin-typescript': 8.3.0_15dfac413fd0241781a9fd89f988e2e5
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.1+vite@2.6.14
@@ -92,7 +92,7 @@ importers:
       svelte-preprocess: 4.9.8_52f09cdedecc76bb586447013cfdc85d
       tslib: 2.3.1
       typescript: 4.4.4
-      unplugin-icons: 0.7.6_d3b2279a5e023e0fbe585c1f825752b3
+      unplugin-icons: 0.7.6_a27fbe46efdba88369e18302ea610a77
       unplugin-vue-components: 0.14.13_238762cf28c3d5ab6b5674e3ed9bcbbe
       vite: 2.6.14
       vite-plugin-windicss: 1.5.1_vite@2.6.14
@@ -412,8 +412,8 @@ packages:
     resolution: {integrity: sha512-LFelJDOLZ6JHlmlAkgrvmcu4hpNPB91KYcr4f60D/exzU1eNOb4/KCVHIydGHIQFaOacIOD+Xy+B7P1z812cZg==}
     dev: true
 
-  /@iconify/json/1.1.428:
-    resolution: {integrity: sha512-86b4F345feBxH4vP4r0DSM/c5Qw/uVUU7oecWc3xz4dIOV4ALmS6l4y8uHIEhmuMDX8iDMlegH4cVUtK42Bnwg==}
+  /@iconify/json/1.1.461:
+    resolution: {integrity: sha512-9Y41Tk9s3LDt4WI20XySNhNX6qTJ/WOBeE3O2iyoV9LJ6gFEDjp0uTPzfRU9NUx7D6VkvQ/htJEuRe9LmyMqUA==}
     dev: true
 
   /@jest/types/27.2.5:
@@ -3198,7 +3198,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin-icons/0.7.6_d3b2279a5e023e0fbe585c1f825752b3:
+  /unplugin-icons/0.7.6_a27fbe46efdba88369e18302ea610a77:
     resolution: {integrity: sha512-P9Uvto2ImdIYovkk13YBkr/o5GRyYsjaVerrcP2AnAewqxcEh20IB71ZkTWog9ywTnGgv0sfeIlOQplbbaCzbw==}
     peerDependencies:
       '@iconify/json': '*'
@@ -3216,7 +3216,7 @@ packages:
       vue-template-es2015-compiler:
         optional: true
     dependencies:
-      '@iconify/json': 1.1.428
+      '@iconify/json': 1.1.461
       '@iconify/json-tools': 1.0.10
       has-pkg: 0.0.1
       unplugin: 0.2.20_rollup@2.60.0+vite@2.6.14
