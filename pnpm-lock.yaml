@@ -39,7 +39,7 @@ importers:
       rollup-plugin-terser: 7.0.2
       rollup-plugin-typescript2: 0.30.0
       rollup-plugin-uglify: 6.0.4
-      simple-git: 2.47.0
+      simple-git: 3.5.0
       svelte: 3.44.1
       svelte-preprocess: 4.9.8
       tslib: 2.3.1
@@ -87,7 +87,7 @@ importers:
       rollup-plugin-terser: 7.0.2_rollup@2.60.0
       rollup-plugin-typescript2: 0.30.0_rollup@2.60.0+typescript@4.4.4
       rollup-plugin-uglify: 6.0.4_rollup@2.60.0
-      simple-git: 2.47.0
+      simple-git: 3.5.0
       svelte: 3.44.1
       svelte-preprocess: 4.9.8_52f09cdedecc76bb586447013cfdc85d
       tslib: 2.3.1
@@ -302,7 +302,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.16.0
       '@babel/parser': 7.16.3
       '@babel/types': 7.16.0
-      debug: 4.3.2
+      debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -440,7 +440,7 @@ packages:
   /@kwsites/file-exists/1.1.1:
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
     dependencies:
-      debug: 4.3.2
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -844,7 +844,7 @@ packages:
   /@windicss/config/1.5.1:
     resolution: {integrity: sha512-nWNgvvJj9RcYhLcqwju/Z8FfaHRjyWHDYS3IgY7lWUM+vWTLFuKqhavKfC1589kdYjiO9JeX07Vg+YzfcxP0Yw==}
     dependencies:
-      debug: 4.3.2
+      debug: 4.3.4
       jiti: 1.12.9
       windicss: 3.2.1
     transitivePeerDependencies:
@@ -856,7 +856,7 @@ packages:
     dependencies:
       '@antfu/utils': 0.3.0
       '@windicss/config': 1.5.1
-      debug: 4.3.2
+      debug: 4.3.4
       fast-glob: 3.2.7
       magic-string: 0.25.7
       micromatch: 4.0.4
@@ -1315,6 +1315,18 @@ packages:
 
   /debug/4.3.2:
     resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
+  /debug/4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -2853,12 +2865,12 @@ packages:
     resolution: {integrity: sha512-KWcOiKeQj6ZyXx7zq4YxSMgHRlod4czeBQZrPb8OKcohcqAXShm7E20kEMle9WBt26hFcAf0qLOcp5zmY7kOqQ==}
     dev: true
 
-  /simple-git/2.47.0:
-    resolution: {integrity: sha512-+HfCpqPBEZTPWiW9fPdbiPJDslM22MLqrktfzNKyI2pWaJa6DhfNVx4Mds04KZzVv5vjC9/ksw3y5gVf8ECWDg==}
+  /simple-git/3.5.0:
+    resolution: {integrity: sha512-fZsaq5nzdxQRhMNs6ESGLpMUHoL5GRP+boWPhq9pMYMKwOGZV2jHOxi8AbFFA2Y/6u4kR99HoULizSbpzaODkA==}
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
-      debug: 4.3.2
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
     dev: true
