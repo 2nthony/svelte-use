@@ -50,7 +50,7 @@ importers:
       vite-plugin-windicss: 1.5.1
       vitepress: 0.17.3
       vue: 3.2.22
-      vue-demi: 0.11.4
+      vue-demi: 0.13.5
     devDependencies:
       '@2nthony/prettier-config': 1.0.0
       '@iconify/json': 1.1.428
@@ -98,7 +98,7 @@ importers:
       vite-plugin-windicss: 1.5.1_vite@2.6.14
       vitepress: 0.17.3
       vue: 3.2.22
-      vue-demi: 0.11.4_vue@3.2.22
+      vue-demi: 0.13.5_vue@3.2.22
 
   packages/core:
     specifiers:
@@ -280,6 +280,8 @@ packages:
     resolution: {integrity: sha512-dcNwU1O4sx57ClvLBVFbEgx0UZWfd0JQX5X6fxFRCLHelFBGXFfSz6Y0FAq2PEwUqlqLkdVjVr4VASEOuUnLJw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.0
     dev: true
 
   /@babel/template/7.16.0:
@@ -823,7 +825,7 @@ packages:
     dependencies:
       '@vueuse/shared': 6.9.1_vue@3.2.22
       vue: 3.2.22
-      vue-demi: 0.11.4_vue@3.2.22
+      vue-demi: 0.13.5_vue@3.2.22
     dev: true
 
   /@vueuse/shared/6.9.1_vue@3.2.22:
@@ -838,7 +840,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.22
-      vue-demi: 0.11.4_vue@3.2.22
+      vue-demi: 0.13.5_vue@3.2.22
     dev: true
 
   /@windicss/config/1.5.1:
@@ -871,6 +873,12 @@ packages:
     dependencies:
       mime-types: 2.1.34
       negotiator: 0.6.2
+    dev: true
+
+  /acorn/8.7.1:
+    resolution: {integrity: sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
     dev: true
 
   /algoliasearch/4.11.0:
@@ -1217,6 +1225,8 @@ packages:
       on-headers: 1.0.2
       safe-buffer: 5.1.2
       vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /concat-map/0.0.1:
@@ -1309,6 +1319,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
@@ -3105,6 +3120,7 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
+      acorn: 8.7.1
       commander: 2.20.3
       source-map: 0.7.3
       source-map-support: 0.5.20
@@ -3367,8 +3383,8 @@ packages:
       - supports-color
     dev: true
 
-  /vue-demi/0.11.4_vue@3.2.22:
-    resolution: {integrity: sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==}
+  /vue-demi/0.13.5_vue@3.2.22:
+    resolution: {integrity: sha512-tO3K2bML3AwiHmVHeKCq6HLef2st4zBXIV5aEkoJl6HZ+gJWxWv2O8wLH8qrA3SX3lDoTDHNghLX1xZg83MXvw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
