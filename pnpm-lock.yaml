@@ -29,7 +29,7 @@ importers:
       fs-extra: 10.0.0
       gray-matter: 4.0.3
       js-yaml: 4.1.0
-      postcss: 8.3.11
+      postcss: 8.4.31
       postcss-nested: 5.0.6
       prettier: 2.4.1
       prism-theme-vars: 0.2.2
@@ -77,8 +77,8 @@ importers:
       fs-extra: 10.0.0
       gray-matter: 4.0.3
       js-yaml: 4.1.0
-      postcss: 8.3.11
-      postcss-nested: 5.0.6_postcss@8.3.11
+      postcss: 8.4.31
+      postcss-nested: 5.0.6_postcss@8.4.31
       prettier: 2.4.1
       prism-theme-vars: 0.2.2
       rimraf: 3.0.2
@@ -89,7 +89,7 @@ importers:
       rollup-plugin-uglify: 6.0.4_rollup@2.60.0
       simple-git: 3.5.0
       svelte: 3.44.1
-      svelte-preprocess: 4.9.8_52f09cdedecc76bb586447013cfdc85d
+      svelte-preprocess: 4.9.8_7d925dd9f6b5a703b49f660c44681c99
       tslib: 2.3.1
       typescript: 4.4.4
       unplugin-icons: 0.7.6_d3b2279a5e023e0fbe585c1f825752b3
@@ -280,6 +280,8 @@ packages:
     resolution: {integrity: sha512-dcNwU1O4sx57ClvLBVFbEgx0UZWfd0JQX5X6fxFRCLHelFBGXFfSz6Y0FAq2PEwUqlqLkdVjVr4VASEOuUnLJw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.0
     dev: true
 
   /@babel/template/7.16.0:
@@ -708,7 +710,7 @@ packages:
       '@vue/shared': 3.2.21
       estree-walker: 2.0.2
       magic-string: 0.25.7
-      postcss: 8.3.11
+      postcss: 8.4.31
       source-map: 0.6.1
     dev: true
 
@@ -723,7 +725,7 @@ packages:
       '@vue/shared': 3.2.22
       estree-walker: 2.0.2
       magic-string: 0.25.7
-      postcss: 8.3.11
+      postcss: 8.4.31
       source-map: 0.6.1
     dev: true
 
@@ -871,6 +873,12 @@ packages:
     dependencies:
       mime-types: 2.1.34
       negotiator: 0.6.2
+    dev: true
+
+  /acorn/8.10.0:
+    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
     dev: true
 
   /algoliasearch/4.11.0:
@@ -1217,6 +1225,8 @@ packages:
       on-headers: 1.0.2
       safe-buffer: 5.1.2
       vary: 1.1.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /concat-map/0.0.1:
@@ -1309,6 +1319,11 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
@@ -2397,8 +2412,8 @@ packages:
     resolution: {integrity: sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=}
     dev: true
 
-  /nanoid/3.1.30:
-    resolution: {integrity: sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==}
+  /nanoid/3.3.6:
+    resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
@@ -2553,13 +2568,13 @@ packages:
       trouter: 2.0.1
     dev: true
 
-  /postcss-nested/5.0.6_postcss@8.3.11:
+  /postcss-nested/5.0.6_postcss@8.4.31:
     resolution: {integrity: sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
     dependencies:
-      postcss: 8.3.11
+      postcss: 8.4.31
       postcss-selector-parser: 6.0.6
     dev: true
 
@@ -2571,13 +2586,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
-  /postcss/8.3.11:
-    resolution: {integrity: sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA==}
+  /postcss/8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.1.30
+      nanoid: 3.3.6
       picocolors: 1.0.0
-      source-map-js: 0.6.2
+      source-map-js: 1.0.2
     dev: true
 
   /preact/10.5.15:
@@ -2903,8 +2918,8 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /source-map-js/0.6.2:
-    resolution: {integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==}
+  /source-map-js/1.0.2:
+    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -3038,7 +3053,7 @@ packages:
       svelte: 3.44.1
     dev: true
 
-  /svelte-preprocess/4.9.8_52f09cdedecc76bb586447013cfdc85d:
+  /svelte-preprocess/4.9.8_7d925dd9f6b5a703b49f660c44681c99:
     resolution: {integrity: sha512-EQS/oRZzMtYdAprppZxY3HcysKh11w54MgA63ybtL+TAZ4hVqYOnhw41JVJjWN9dhPnNjjLzvbZ2tMhTsla1Og==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -3083,7 +3098,7 @@ packages:
       '@types/sass': 1.43.0
       detect-indent: 6.1.0
       magic-string: 0.25.7
-      postcss: 8.3.11
+      postcss: 8.4.31
       sorcery: 0.10.0
       strip-indent: 3.0.0
       svelte: 3.44.1
@@ -3105,6 +3120,7 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
+      acorn: 8.10.0
       commander: 2.20.3
       source-map: 0.7.3
       source-map-support: 0.5.20
@@ -3122,7 +3138,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
+    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
     dev: true
 
@@ -3319,7 +3335,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.13.13
-      postcss: 8.3.11
+      postcss: 8.4.31
       resolve: 1.20.0
       rollup: 2.60.0
     optionalDependencies:
