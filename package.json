@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@2nthony/prettier-config": "1.0.0",
-    "@iconify/json": "1.1.428",
+    "@iconify/json": "1.1.461",
     "@rollup/plugin-replace": "3.0.0",
     "@rollup/plugin-typescript": "8.3.0",
     "@sveltejs/vite-plugin-svelte": "1.0.0-next.30",
