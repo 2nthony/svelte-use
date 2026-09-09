@@ -46,7 +46,7 @@
     "fast-glob": "3.2.7",
     "fs-extra": "10.0.0",
     "gray-matter": "4.0.3",
-    "js-yaml": "4.1.0",
+    "js-yaml": "4.3.2",
     "postcss": "8.3.11",
     "postcss-nested": "5.0.6",
     "prettier": "2.4.1",
